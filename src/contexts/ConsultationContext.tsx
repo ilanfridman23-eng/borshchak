@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useCallback } from "react";
 import ConsultationModal from "@/components/ConsultationModal";
 
 interface ConsultationContextType {
@@ -6,21 +6,22 @@ interface ConsultationContextType {
   closeConsultation: () => void;
 }
 
-const ConsultationContext = createContext<ConsultationContextType | undefined>(undefined);
+const defaultContext: ConsultationContextType = {
+  openConsultation: () => {},
+  closeConsultation: () => {},
+};
+
+const ConsultationContext = createContext<ConsultationContextType>(defaultContext);
 
 export const useConsultation = () => {
-  const context = useContext(ConsultationContext);
-  if (!context) {
-    throw new Error("useConsultation must be used within a ConsultationProvider");
-  }
-  return context;
+  return useContext(ConsultationContext);
 };
 
 export const ConsultationProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openConsultation = () => setIsOpen(true);
-  const closeConsultation = () => setIsOpen(false);
+  const openConsultation = useCallback(() => setIsOpen(true), []);
+  const closeConsultation = useCallback(() => setIsOpen(false), []);
 
   return (
     <ConsultationContext.Provider value={{ openConsultation, closeConsultation }}>
