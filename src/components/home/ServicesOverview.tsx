@@ -25,21 +25,19 @@ const ServicesOverview = () => {
   return (
     <section className="section-padding">
       <div className="container">
-        <div className="flex flex-col lg:flex-row items-center gap-10">
-          {/* Image on left */}
-          <div className="lg:w-1/3 w-full">
+        <div className="flex flex-col lg:flex-row items-stretch gap-10">
+          {/* Image on left - larger */}
+          <div className="lg:w-1/2 w-full">
             <img 
               src={justiceStatue} 
               alt="Lady Justice statue with scales" 
-              className="rounded-xl shadow-lg w-full h-auto object-cover"
+              className="rounded-xl shadow-lg w-full h-full object-cover"
             />
           </div>
           
-          {/* Services on right */}
-          <div className="lg:w-2/3 w-full">
-            <div className="text-center lg:text-left mb-8">
-              <h2 className="heading-section">Family Law Services</h2>
-            </div>
+          {/* Services on right with header */}
+          <div className="lg:w-1/2 w-full flex flex-col justify-center">
+            <h2 className="heading-section text-center lg:text-left mb-8">Family Law Services</h2>
             
             <div className="grid sm:grid-cols-2 gap-4">
               {services.map((service, index) => (
