@@ -1,4 +1,5 @@
 import { Users, Briefcase, AlertTriangle } from "lucide-react";
+import whoWeHelpBg from "@/assets/who-we-help-bg.jpg";
 
 const personas = [
   {
@@ -20,15 +21,25 @@ const personas = [
 
 const WhoWeHelp = () => {
   return (
-    <section className="section-padding">
-      <div className="container">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={whoWeHelpBg} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+      </div>
+      
+      <div className="container relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="heading-section mb-4">Who We Help</h2>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">
           {personas.map((persona, index) => (
-            <div key={index} className="card-elevated text-center">
+            <div key={index} className="card-elevated text-center bg-background/95 backdrop-blur-sm">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary mb-5">
                 <persona.icon className="w-7 h-7 text-primary" />
               </div>
