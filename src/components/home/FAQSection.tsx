@@ -7,20 +7,24 @@ import {
 
 const faqs = [
   {
-    question: "Do I really need a lawyer?",
-    answer: "Family law decisions affect your finances and children for decades. Even 'simple' cases have tax implications and custody nuances most people miss."
+    question: "Can you get a divorce without going to court?",
+    answer: "Yes, in Ohio, it is possible to avoid traditional court hearings by pursuing either an uncontested divorce or dissolution of marriage. If both spouses agree on all terms such as custody, support, and property division, the court process can be streamlined into a paperwork-based review or a short, non-adversarial hearing. Mediation or collaborative divorce can also help you stay out of court."
   },
   {
-    question: "How much does this cost?",
-    answer: "Costs vary by complexity. We discuss fees openly in your free consultation—no surprises."
+    question: "How do I get a divorce in Ohio?",
+    answer: "To get a divorce in Ohio, at least one spouse must have lived in the state for 6 months. The process starts with filing a complaint for divorce in your county's domestic relations court. You will need to address child custody, division of assets, support, and more. If contested, your case proceeds through hearings. If uncontested, it can resolve more simply, sometimes with one brief court appearance."
   },
   {
-    question: "What if my spouse already hired one?",
-    answer: "You need representation immediately. When one spouse has a lawyer, agreements often favor them. We level the playing field."
+    question: "What is the average child support per child in Ohio?",
+    answer: "Child support in Ohio is calculated using state guidelines based on both parents' incomes, number of children, and specific expenses like healthcare or childcare. While there is no fixed \"average,\" a middle-income family might expect to pay $300 to $700 per child per month depending on the case. However, every case is unique and using a calculator or getting a review from an attorney is best."
   },
   {
-    question: "Can we avoid court?",
-    answer: "Often, yes. We pursue mediation and settlement when possible. But if court is necessary, we're fully prepared."
+    question: "What is the difference between legal separation and divorce?",
+    answer: "Legal separation allows spouses to live apart with a formal agreement on finances, custody, and support but without ending the marriage. Divorce, on the other hand, legally ends the marriage. Legal separation may be preferred for religious, financial, or insurance reasons but it still involves a court order and formal process."
+  },
+  {
+    question: "Are divorce or family law records public in Ohio and where can I find them?",
+    answer: "Yes, divorce and family law records in Ohio are generally public and can be accessed through the Clerk of Courts in the county where the case was filed. Some sensitive details such as financial affidavits or abuse reports may be sealed. You can usually search online using the court's public access portal."
   }
 ];
 
