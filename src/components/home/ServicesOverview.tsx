@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import justiceStatue from "@/assets/justice-statue.jpg";
+import justiceStatue from "@/assets/law-hero-image.png";
 
 const services = [
   {
