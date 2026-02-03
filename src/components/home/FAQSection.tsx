@@ -13,19 +13,23 @@ const faqs = [
   },
   {
     question: "How do I get a divorce in Ohio?",
-    answer: "To get a divorce in Ohio, at least one spouse must have lived in the state for 6 months. The process starts with filing a complaint for divorce in your county's domestic relations court. You will need to address child custody, division of assets, support, and more. If contested, your case proceeds through hearings. If uncontested, it can resolve more simply, sometimes with one brief court appearance."
+    answer: "To get a divorce in Ohio, at least one spouse must have lived in the state for 6 months. The process starts with filing a complaint for divorce in your county's domestic relations court. You will need to address child custody, division of assets, support, and more. If contested, your case proceeds through hearings. If uncontested, it can resolve more simply, sometimes with one brief court appearance.",
+    videoId: "FYYwaqd4V94"
   },
   {
     question: "What is the average child support per child in Ohio?",
-    answer: "Child support in Ohio is calculated using state guidelines based on both parents' incomes, number of children, and specific expenses like healthcare or childcare. While there is no fixed \"average,\" a middle-income family might expect to pay $300 to $700 per child per month depending on the case. However, every case is unique and using a calculator or getting a review from an attorney is best."
+    answer: "Child support in Ohio is calculated using state guidelines based on both parents' incomes, number of children, and specific expenses like healthcare or childcare. While there is no fixed \"average,\" a middle-income family might expect to pay $300 to $700 per child per month depending on the case. However, every case is unique and using a calculator or getting a review from an attorney is best.",
+    videoId: "Ft6lrL_O5fE"
   },
   {
     question: "What is the difference between legal separation and divorce?",
-    answer: "Legal separation allows spouses to live apart with a formal agreement on finances, custody, and support but without ending the marriage. Divorce, on the other hand, legally ends the marriage. Legal separation may be preferred for religious, financial, or insurance reasons but it still involves a court order and formal process."
+    answer: "Legal separation allows spouses to live apart with a formal agreement on finances, custody, and support but without ending the marriage. Divorce, on the other hand, legally ends the marriage. Legal separation may be preferred for religious, financial, or insurance reasons but it still involves a court order and formal process.",
+    videoId: "PettmRT-6U4"
   },
   {
     question: "Are divorce or family law records public in Ohio and where can I find them?",
-    answer: "Yes, divorce and family law records in Ohio are generally public and can be accessed through the Clerk of Courts in the county where the case was filed. Some sensitive details such as financial affidavits or abuse reports may be sealed. You can usually search online using the court's public access portal."
+    answer: "Yes, divorce and family law records in Ohio are generally public and can be accessed through the Clerk of Courts in the county where the case was filed. Some sensitive details such as financial affidavits or abuse reports may be sealed. You can usually search online using the court's public access portal.",
+    videoId: "IZ_-POx-Rmw"
   }
 ];
 
