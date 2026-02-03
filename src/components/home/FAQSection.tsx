@@ -8,7 +8,8 @@ import {
 const faqs = [
   {
     question: "Can you get a divorce without going to court?",
-    answer: "Yes, in Ohio, it is possible to avoid traditional court hearings by pursuing either an uncontested divorce or dissolution of marriage. If both spouses agree on all terms such as custody, support, and property division, the court process can be streamlined into a paperwork-based review or a short, non-adversarial hearing. Mediation or collaborative divorce can also help you stay out of court."
+    answer: "Yes, in Ohio, it is possible to avoid traditional court hearings by pursuing either an uncontested divorce or dissolution of marriage. If both spouses agree on all terms such as custody, support, and property division, the court process can be streamlined into a paperwork-based review or a short, non-adversarial hearing. Mediation or collaborative divorce can also help you stay out of court.",
+    videoId: "KP_H5vne-WE"
   },
   {
     question: "How do I get a divorce in Ohio?",
@@ -43,7 +44,18 @@ const FAQSection = () => {
                 <span className="font-medium text-foreground pr-4">{faq.question}</span>
               </AccordionTrigger>
               <AccordionContent className="pb-5">
-                <p className="text-muted-foreground">{faq.answer}</p>
+                <p className="text-muted-foreground mb-4">{faq.answer}</p>
+                {faq.videoId && (
+                  <div className="aspect-video rounded-lg overflow-hidden mt-4">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${faq.videoId}`}
+                      title={faq.question}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                )}
               </AccordionContent>
             </AccordionItem>
           ))}
