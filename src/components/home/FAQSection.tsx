@@ -36,21 +36,26 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section className="section-padding">
-      <div className="container max-w-2xl">
-        <div className="text-center mb-10">
+      <div className="container max-w-4xl">
+        <div className="text-center mb-12">
           <h2 className="heading-section">Common Questions</h2>
+          <p className="text-muted-foreground mt-4 text-lg">Get answers to frequently asked questions about Ohio family law</p>
         </div>
         
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full space-y-4">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
-              <AccordionTrigger className="text-left py-5 hover:no-underline">
-                <span className="font-medium text-foreground pr-4">{faq.question}</span>
+            <AccordionItem 
+              key={index} 
+              value={`item-${index}`} 
+              className="border border-border rounded-xl px-6 bg-card/50"
+            >
+              <AccordionTrigger className="text-left py-6 hover:no-underline">
+                <span className="font-semibold text-foreground text-lg md:text-xl pr-4">{faq.question}</span>
               </AccordionTrigger>
-              <AccordionContent className="pb-5">
-                <p className="text-muted-foreground mb-4">{faq.answer}</p>
+              <AccordionContent className="pb-6">
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">{faq.answer}</p>
                 {faq.videoId && (
-                  <div className="aspect-video rounded-lg overflow-hidden mt-4">
+                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                     <iframe
                       src={`https://www.youtube.com/embed/${faq.videoId}`}
                       title={faq.question}
