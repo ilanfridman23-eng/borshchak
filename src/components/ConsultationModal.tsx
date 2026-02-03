@@ -108,6 +108,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                     onChange={handleChange}
                     placeholder="John Smith"
                     required
+                    className="border-accent/30 focus-visible:ring-accent"
                   />
                 </div>
 
@@ -125,6 +126,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                       onChange={handleChange}
                       placeholder="john@example.com"
                       required
+                      className="border-accent/30 focus-visible:ring-accent"
                     />
                   </div>
 
@@ -141,6 +143,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                       onChange={handleChange}
                       placeholder="(555) 123-4567"
                       required
+                      className="border-accent/30 focus-visible:ring-accent"
                     />
                   </div>
                 </div>
@@ -157,6 +160,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                     onChange={handleChange}
                     placeholder="Briefly describe your situation..."
                     rows={3}
+                    className="border-accent/30 focus-visible:ring-accent"
                   />
                 </div>
 
