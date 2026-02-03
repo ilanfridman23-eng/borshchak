@@ -41,7 +41,7 @@ const ServicesOverview = () => {
           
           {/* Services on right with header */}
           <div className="lg:w-1/2 w-full flex flex-col justify-center">
-            <h2 className="heading-section text-center lg:text-left mb-8">Family Law Services</h2>
+            <h2 className="heading-section text-center mb-8">Family Law Services</h2>
             
             <div className="grid sm:grid-cols-2 gap-4">
               {services.map((service, index) => (
