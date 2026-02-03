@@ -24,18 +24,17 @@ const services = [
 const ServicesOverview = () => {
   return (
     <section className="section-padding overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center gap-0">
+      <div className="flex flex-col lg:flex-row items-center gap-8">
         {/* Image on left - bleeds to edge, contains full image */}
-        <div className="lg:w-1/2 w-full">
+        <div className="lg:w-1/3 w-full">
           <div className="lg:ml-[calc(-50vw+50%)] lg:w-[calc(100%+50vw-50%)]">
             <img 
               src={justiceStatue} 
               alt="Lady Justice statue with scales" 
-              className="w-full h-auto object-contain lg:rounded-r-xl"
+              className="w-full h-auto object-contain lg:rounded-r-xl max-h-[400px]"
             />
           </div>
         </div>
-        
         {/* Services on right with header */}
         <div className="lg:w-1/2 w-full flex flex-col justify-center py-10 lg:py-16 lg:pl-12 px-6 lg:pr-[max(1rem,calc((100vw-1280px)/2+1rem))]">
           <h2 className="heading-section text-center lg:text-left mb-8">Family Law Services</h2>
