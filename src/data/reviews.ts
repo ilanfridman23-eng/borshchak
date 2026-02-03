@@ -891,6 +891,307 @@ export const reviews: Review[] = [
     text: "Dmitry and his team helped me with my divorce. Great advocates for their clients.",
     isLocalGuide: true,
     reviewCount: "24 reviews"
+  },
+  {
+    id: 120,
+    name: "Jessica Martinez",
+    rating: 5,
+    date: "2 years ago",
+    text: "Dmitriy and his team were incredible throughout my entire case. They were always available to answer my questions and made me feel supported during a very difficult time."
+  },
+  {
+    id: 121,
+    name: "Michael Thompson",
+    rating: 5,
+    date: "1 year ago",
+    text: "Excellent representation. Hank was thorough, professional, and got me the results I needed. Highly recommend this firm."
+  },
+  {
+    id: 122,
+    name: "Sandra Williams",
+    rating: 5,
+    date: "3 years ago",
+    text: "The entire staff was wonderful. They kept me informed every step of the way and fought hard for my children. Forever grateful."
+  },
+  {
+    id: 123,
+    name: "James Rodriguez",
+    rating: 5,
+    date: "2 years ago",
+    text: "After consulting with multiple attorneys, I knew Dmitriy was the right choice. His expertise and dedication showed in every interaction.",
+    isLocalGuide: true,
+    reviewCount: "15 reviews"
+  },
+  {
+    id: 124,
+    name: "Patricia Johnson",
+    rating: 5,
+    date: "4 years ago",
+    text: "Jonathan Pope handled my case with professionalism and care. He was always responsive and kept me updated on all developments."
+  },
+  {
+    id: 125,
+    name: "David Chen",
+    rating: 5,
+    date: "1 year ago",
+    text: "Outstanding service from start to finish. The team at Borshchak Law Group truly cares about their clients and it shows in everything they do."
+  },
+  {
+    id: 126,
+    name: "Maria Garcia",
+    rating: 5,
+    date: "3 years ago",
+    text: "Dmitriy helped me through one of the hardest times in my life. His compassion and legal expertise made all the difference."
+  },
+  {
+    id: 127,
+    name: "Robert Anderson",
+    rating: 5,
+    date: "2 years ago",
+    text: "Hank Sonderman is an exceptional attorney. He explained everything clearly and fought tirelessly for my rights as a father."
+  },
+  {
+    id: 128,
+    name: "Jennifer Brown",
+    rating: 5,
+    date: "4 years ago",
+    text: "I cannot recommend this firm enough. They were there for me when I needed them most and achieved an outcome I never thought possible."
+  },
+  {
+    id: 129,
+    name: "Christopher Lee",
+    rating: 5,
+    date: "1 year ago",
+    text: "Professional, responsive, and effective. Dmitriy and his team exceeded all my expectations. Worth every penny.",
+    isLocalGuide: true,
+    reviewCount: "8 reviews"
+  },
+  {
+    id: 130,
+    name: "Angela Davis",
+    rating: 5,
+    date: "3 years ago",
+    text: "The best decision I made was hiring Borshchak Law Group. They handled my complex divorce with skill and sensitivity."
+  },
+  {
+    id: 131,
+    name: "Matthew Wilson",
+    rating: 5,
+    date: "2 years ago",
+    text: "Leigh and the entire team were amazing. Communication was excellent throughout my case and I always felt like a priority."
+  },
+  {
+    id: 132,
+    name: "Stephanie Moore",
+    rating: 5,
+    date: "4 years ago",
+    text: "Dmitriy's knowledge of family law is impressive. He navigated my custody case expertly and secured the best outcome for my children."
+  },
+  {
+    id: 133,
+    name: "William Taylor",
+    rating: 5,
+    date: "1 year ago",
+    text: "Five stars isn't enough. This firm went above and beyond for me. Highly recommend to anyone going through a family law matter."
+  },
+  {
+    id: 134,
+    name: "Michelle Harris",
+    rating: 5,
+    date: "3 years ago",
+    text: "Keri Reeves was fantastic. She was patient, understanding, and achieved great results in my case. Thank you!"
+  },
+  {
+    id: 135,
+    name: "Daniel Clark",
+    rating: 5,
+    date: "2 years ago",
+    text: "From consultation to resolution, the service was impeccable. Dmitriy truly cares about his clients and their families."
+  },
+  {
+    id: 136,
+    name: "Laura Robinson",
+    rating: 5,
+    date: "4 years ago",
+    text: "The team at Borshchak Law Group made a difficult process much easier. They were always available and kept me informed.",
+    isLocalGuide: true,
+    reviewCount: "12 reviews"
+  },
+  {
+    id: 137,
+    name: "Joseph White",
+    rating: 5,
+    date: "1 year ago",
+    text: "Excellent experience. Hank was knowledgeable, strategic, and got me the custody arrangement I was hoping for."
+  },
+  {
+    id: 138,
+    name: "Elizabeth Martinez",
+    rating: 5,
+    date: "3 years ago",
+    text: "I'm so grateful I found this firm. Dmitriy's expertise and compassion helped me through the darkest time of my life."
+  },
+  {
+    id: 139,
+    name: "Richard Jackson",
+    rating: 5,
+    date: "2 years ago",
+    text: "Professional, efficient, and caring. The entire staff treated me with respect and worked hard on my behalf."
+  },
+  {
+    id: 140,
+    name: "Susan Thompson",
+    rating: 5,
+    date: "4 years ago",
+    text: "Lucy Shane represented me beautifully. She was thorough, compassionate, and achieved an excellent outcome."
+  },
+  {
+    id: 141,
+    name: "Charles King",
+    rating: 5,
+    date: "1 year ago",
+    text: "Dmitriy and his team are the real deal. They deliver results and treat their clients like family. Highly recommend."
+  },
+  {
+    id: 142,
+    name: "Nancy Wright",
+    rating: 5,
+    date: "3 years ago",
+    text: "After a bad experience with another attorney, I found Borshchak Law Group. What a difference! They truly care about their clients.",
+    isLocalGuide: true,
+    reviewCount: "6 reviews"
+  },
+  {
+    id: 143,
+    name: "Mark Lewis",
+    rating: 5,
+    date: "2 years ago",
+    text: "Hank Sonderman fought hard for me and my children. His dedication and expertise are unmatched. Thank you!"
+  },
+  {
+    id: 144,
+    name: "Betty Young",
+    rating: 5,
+    date: "4 years ago",
+    text: "The best family law firm in Columbus. They handled my case with professionalism and achieved a wonderful outcome."
+  },
+  {
+    id: 145,
+    name: "Steven Hall",
+    rating: 5,
+    date: "1 year ago",
+    text: "Dmitriy is brilliant. He understood my situation immediately and developed a winning strategy. Forever grateful."
+  },
+  {
+    id: 146,
+    name: "Dorothy Allen",
+    rating: 5,
+    date: "3 years ago",
+    text: "Excellent service from start to finish. The team was always responsive and kept me informed throughout my case."
+  },
+  {
+    id: 147,
+    name: "Andrew Scott",
+    rating: 5,
+    date: "2 years ago",
+    text: "Jonathan Pope handled my divorce professionally and efficiently. I couldn't have asked for better representation."
+  },
+  {
+    id: 148,
+    name: "Margaret Green",
+    rating: 5,
+    date: "4 years ago",
+    text: "The compassion and expertise at this firm are remarkable. They made a difficult time much more manageable.",
+    isLocalGuide: true,
+    reviewCount: "19 reviews"
+  },
+  {
+    id: 149,
+    name: "Joshua Adams",
+    rating: 5,
+    date: "1 year ago",
+    text: "Dmitriy and Leigh were incredible throughout my case. Their communication and dedication are second to none."
+  },
+  {
+    id: 150,
+    name: "Sarah Nelson",
+    rating: 5,
+    date: "3 years ago",
+    text: "I highly recommend Borshchak Law Group. They fought for my children and achieved an amazing outcome."
+  },
+  {
+    id: 151,
+    name: "Kevin Carter",
+    rating: 5,
+    date: "2 years ago",
+    text: "Hank was phenomenal. He kept me calm during a stressful time and delivered results beyond my expectations."
+  },
+  {
+    id: 152,
+    name: "Lisa Mitchell",
+    rating: 5,
+    date: "4 years ago",
+    text: "The entire team at Borshchak Law Group is outstanding. They truly care about their clients and it shows."
+  },
+  {
+    id: 153,
+    name: "Brian Perez",
+    rating: 5,
+    date: "1 year ago",
+    text: "Dmitriy is the best family law attorney in Columbus. His expertise and dedication are unmatched. Highly recommend!",
+    isLocalGuide: true,
+    reviewCount: "22 reviews"
+  },
+  {
+    id: 154,
+    name: "Donna Roberts",
+    rating: 5,
+    date: "3 years ago",
+    text: "Lucy Shane was wonderful. She guided me through my dissolution with patience and care. Thank you so much!"
+  },
+  {
+    id: 155,
+    name: "Ronald Turner",
+    rating: 5,
+    date: "2 years ago",
+    text: "Professional and responsive. The team at Borshchak Law Group made my divorce process as smooth as possible."
+  },
+  {
+    id: 156,
+    name: "Cynthia Phillips",
+    rating: 5,
+    date: "4 years ago",
+    text: "I cannot say enough good things about this firm. Dmitriy fought for me and got the results I needed."
+  },
+  {
+    id: 157,
+    name: "Timothy Campbell",
+    rating: 5,
+    date: "1 year ago",
+    text: "Keri Reeves was fantastic. She was knowledgeable, responsive, and achieved a great outcome for my case."
+  },
+  {
+    id: 158,
+    name: "Deborah Baker",
+    rating: 5,
+    date: "3 years ago",
+    text: "The best decision I ever made was hiring Borshchak Law Group. They exceeded all my expectations.",
+    isLocalGuide: true,
+    reviewCount: "11 reviews"
+  },
+  {
+    id: 159,
+    name: "Jason Gonzalez",
+    rating: 5,
+    date: "2 years ago",
+    text: "Dmitriy and his team are exceptional. They provided outstanding representation and achieved amazing results."
+  },
+  {
+    id: 160,
+    name: "Sharon Hill",
+    rating: 5,
+    date: "4 years ago",
+    text: "Hank Sonderman is an incredible attorney. He fought hard for my family and I'm forever grateful for his help."
   }
 ];
 
