@@ -882,6 +882,15 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2 years ago",
     text: "Great service! Always responded in a timely manner and were willing to help me in every way possible!"
+  },
+  {
+    id: 119,
+    name: "Stacia Smith",
+    rating: 5,
+    date: "3 years ago",
+    text: "Dmitry and his team helped me with my divorce. Great advocates for their clients.",
+    isLocalGuide: true,
+    reviewCount: "24 reviews"
   }
 ];
 
