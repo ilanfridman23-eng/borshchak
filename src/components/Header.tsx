@@ -42,7 +42,7 @@ const Header = () => {
           
           <div className="hidden lg:flex items-center">
             <NavigationMenu>
-              <NavigationMenuList className="gap-2">
+              <NavigationMenuList className="gap-0">
                 {/* Attorneys Dropdown */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary">
