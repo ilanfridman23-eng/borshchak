@@ -1,5 +1,6 @@
 import { Phone, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
@@ -16,11 +17,12 @@ const Header = () => {
         
         {/* Main navigation */}
         <nav className="flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex flex-col">
-              <span className="font-serif text-xl font-semibold text-primary">Morrison Family Law</span>
-              <span className="text-xs text-muted-foreground tracking-wide">Columbus, Ohio</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Borshchak Law Group" 
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
           
           <div className="hidden lg:flex items-center gap-8">

@@ -12,7 +12,7 @@ const About = () => {
         <section className="section-padding bg-secondary/50">
           <div className="container max-w-4xl">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
-              About Morrison Family Law
+              About Borshchak Law Group
             </p>
             <h1 className="heading-hero mb-6">
               Columbus Family Law Attorneys Since 1998
