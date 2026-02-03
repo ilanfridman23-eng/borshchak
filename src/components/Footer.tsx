@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="font-serif text-xl font-semibold mb-4">Morrison Family Law</h3>
+            <img 
+              src={logo} 
+              alt="Borshchak Law Group" 
+              className="h-10 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
               Trusted family law advocates serving Columbus and Central Ohio families for over 25 years.
             </p>
@@ -17,9 +22,9 @@ const Footer = () => {
                 <Phone className="w-4 h-4" />
                 (614) 555-1234
               </a>
-              <a href="mailto:info@morrisonfamilylaw.com" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <a href="mailto:info@borshchaklawgroup.com" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Mail className="w-4 h-4" />
-                info@morrisonfamilylaw.com
+                info@borshchaklawgroup.com
               </a>
               <div className="flex items-start gap-3 text-sm text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
@@ -97,7 +102,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/50">
-            <p>© {new Date().getFullYear()} Morrison Family Law. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Borshchak Law Group. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <Link to="/privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-primary-foreground transition-colors">Terms of Service</Link>

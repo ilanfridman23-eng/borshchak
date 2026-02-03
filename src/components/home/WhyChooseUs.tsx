@@ -29,9 +29,9 @@ const WhyChooseUs = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="heading-section mb-4">
-              Why Clients Choose Morrison Family Law
-            </h2>
+          <h2 className="heading-section mb-4">
+            Why Clients Choose Borshchak Law Group
+          </h2>
             <p className="text-body mb-8">
               You're not looking for the cheapest attorney or the flashiest website. You need someone who will fight intelligently for your interests while treating you as a person, not a case number.
             </p>
