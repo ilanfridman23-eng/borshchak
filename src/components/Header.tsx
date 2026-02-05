@@ -49,14 +49,14 @@ const Header = () => {
                     Attorneys
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-background border border-border shadow-lg">
-                    <ul className="w-48 p-2">
+                    <ul className="w-56 p-2">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/about" 
                             className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
-                            Our Team
+                            Dmitriy Borshchak
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -66,7 +66,17 @@ const Header = () => {
                             to="/about" 
                             className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
-                            Dmitriy Borshchak
+                            Hank Sonderman
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/about" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Keri Reeves
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -218,10 +228,13 @@ const Header = () => {
                     </CollapsibleTrigger>
                     <CollapsibleContent className="pl-4">
                       <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
-                        Our Team
+                        Dmitriy Borshchak
                       </Link>
                       <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
-                        Dmitriy Borshchak
+                        Hank Sonderman
+                      </Link>
+                      <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Keri Reeves
                       </Link>
                     </CollapsibleContent>
                   </Collapsible>
