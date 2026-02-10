@@ -2,6 +2,7 @@ import { Phone, Award, GraduationCap, Briefcase, Mic } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import dmitriyPhoto from "@/assets/dmitriy-borshchak.png";
+import localLawyerBadge from "@/assets/dmitriy-local-lawyer-badge.png";
 
 const DmitriyBorshchak = () => {
   
@@ -39,18 +40,28 @@ const DmitriyBorshchak = () => {
         {/* Recognition Badge */}
         <section className="section-padding-sm bg-card border-y border-border">
           <div className="container max-w-4xl">
-            <a
-              href="https://profiles.superlawyers.com/ohio/columbus/lawyer/dmitriy-borshchak/a9cce30e-86fb-4b84-850f-f4210c6f95ea.html?npcmp=slb:badge:sl_badge:a9cce30e-86fb-4b84-850f-f4210c6f95ea:year&utm_source=a9cce30e-86fb-4b84-850f-f4210c6f95ea&utm_campaign=v2-slbadge-gray&utm_content=profile&utm_medium=dlbcounsel.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-4 hover:opacity-80 transition-opacity"
-            >
-              <Award className="w-10 h-10 text-primary" />
-              <div className="text-center">
-                <div className="font-serif text-xl font-semibold text-primary">Super Lawyers Rising Star</div>
-                <div className="text-sm text-muted-foreground">Selected in 2023</div>
-              </div>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+              <a
+                href="https://profiles.superlawyers.com/ohio/columbus/lawyer/dmitriy-borshchak/a9cce30e-86fb-4b84-850f-f4210c6f95ea.html?npcmp=slb:badge:sl_badge:a9cce30e-86fb-4b84-850f-f4210c6f95ea:year&utm_source=a9cce30e-86fb-4b84-850f-f4210c6f95ea&utm_campaign=v2-slbadge-gray&utm_content=profile&utm_medium=dlbcounsel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+              >
+                <Award className="w-10 h-10 text-primary" />
+                <div className="text-center">
+                  <div className="font-serif text-xl font-semibold text-primary">Super Lawyers Rising Star</div>
+                  <div className="text-sm text-muted-foreground">Selected in 2023</div>
+                </div>
+              </a>
+              <a
+                href="https://mylocallawyer.org/lawyers/dmitriy-borshchak/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img src={localLawyerBadge} alt="My Local Lawyer - Top 10 2023" className="h-16 w-auto" />
+              </a>
+            </div>
           </div>
         </section>
 
