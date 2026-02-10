@@ -31,12 +31,12 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container">
         {/* Main navigation */}
-        <nav className="flex items-center justify-between py-4">
+        <nav className="flex items-center justify-between py-5">
           <Link to="/" className="flex items-center shrink-0">
             <img 
               src={logo} 
               alt="Borshchak Law Group" 
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-14 md:h-16 w-auto object-contain"
             />
           </Link>
           
@@ -45,7 +45,7 @@ const Header = () => {
               <NavigationMenuList className="gap-0">
                 {/* Attorneys Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="bg-transparent text-base font-medium text-foreground hover:text-primary h-12">
                     Attorneys
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-background border border-border shadow-lg">
@@ -54,7 +54,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/attorneys/dmitriy-borshchak" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Dmitriy Borshchak
                           </Link>
@@ -64,7 +64,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/about" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Hank Sonderman
                           </Link>
@@ -74,7 +74,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/about" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Keri Reeves
                           </Link>
@@ -86,7 +86,7 @@ const Header = () => {
 
                 {/* Legal Services Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="bg-transparent text-base font-medium text-foreground hover:text-primary h-12">
                     Legal Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-background border border-border shadow-lg">
@@ -95,7 +95,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/divorce" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Divorce & Legal Separation
                           </Link>
@@ -105,7 +105,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/custody" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Child Custody
                           </Link>
@@ -115,7 +115,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/assets" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Property Division
                           </Link>
@@ -125,7 +125,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/mediation" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Mediation
                           </Link>
@@ -140,7 +140,7 @@ const Header = () => {
                   <NavigationMenuLink asChild>
                     <Link 
                       to="/resources" 
-                      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                      className="inline-flex h-12 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Testimonials
                     </Link>
@@ -152,7 +152,7 @@ const Header = () => {
                   <NavigationMenuLink asChild>
                     <Link 
                       to="/resources" 
-                      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                      className="inline-flex h-12 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Blog
                     </Link>
@@ -161,7 +161,7 @@ const Header = () => {
 
                 {/* Contact Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="bg-transparent text-base font-medium text-foreground hover:text-primary h-12">
                     Contact
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-background border border-border shadow-lg">
@@ -170,7 +170,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/contact" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Contact Us
                           </Link>
@@ -180,7 +180,7 @@ const Header = () => {
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/process" 
-                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                            className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Our Process
                           </Link>
@@ -194,8 +194,8 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="tel:+13803240878" className="hidden sm:flex btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
-              <Phone className="w-4 h-4 mr-2" />
+            <a href="tel:+13803240878" className="hidden sm:flex btn-cta text-base px-6 py-3 whitespace-nowrap">
+              <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
             
@@ -203,7 +203,7 @@ const Header = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <button className="flex items-center justify-center w-10 h-10 rounded-md hover:bg-secondary transition-colors">
-                  <Menu className="w-6 h-6" />
+                  <Menu className="w-7 h-7" />
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[350px]">
