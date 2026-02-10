@@ -12,6 +12,7 @@ import Mediation from "./pages/Mediation";
 import About from "./pages/About";
 import DmitriyBorshchak from "./pages/DmitriyBorshchak";
 import HankSonderman from "./pages/HankSonderman";
+import KeriReeves from "./pages/KeriReeves";
 import Process from "./pages/Process";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/attorneys/dmitriy-borshchak" element={<DmitriyBorshchak />} />
             <Route path="/attorneys/hank-sonderman" element={<HankSonderman />} />
+            <Route path="/attorneys/keri-reeves" element={<KeriReeves />} />
             <Route path="/process" element={<Process />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
