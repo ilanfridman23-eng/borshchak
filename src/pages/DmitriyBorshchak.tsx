@@ -82,19 +82,7 @@ const DmitriyBorshchak = () => {
           </div>
         </section>
 
-        {/* About / Practice Areas */}
-        <section className="section-padding">
-          <div className="container max-w-4xl">
-            <div className="space-y-6 text-body">
-              <p>
-                At the firm, Dmitriy assists clients with a broad range of complex legal matters, including divorce, child custody, child support, marital agreements, fathers' rights, spousal support, and more. With every case he takes on, Dmitriy works to manage and minimize his clients' financial and legal risk.
-              </p>
-              <p>
-                He employs a personalized, methodical approach in order to provide clients with the clear, straightforward answers and advice they need. No matter how difficult a case may be, Dmitriy is committed to aggressively advocating for his clients' rights and best interests.
-              </p>
-            </div>
-          </div>
-        </section>
+
 
         {/* Education */}
         <section className="section-padding bg-card">
