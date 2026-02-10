@@ -73,7 +73,7 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
-                            to="/about" 
+                            to="/attorneys/keri-reeves" 
                             className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Keri Reeves
@@ -226,7 +226,7 @@ const Header = () => {
                       <Link to="/attorneys/hank-sonderman" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
                         Hank Sonderman
                       </Link>
-                      <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/attorneys/keri-reeves" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
                         Keri Reeves
                       </Link>
                     </CollapsibleContent>
