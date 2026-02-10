@@ -1,27 +1,22 @@
 
 
-## Make Navigation Larger
+## Change Body Font to Lora
 
-Increase the size of the logo, menu text, CTA button, and overall navigation bar height in `src/components/Header.tsx`.
+Replace the current body/content font (Inter) with **Lora**, an elegant serif font that pairs beautifully with Playfair Display headings. This will give the site a more refined, professional law firm feel.
 
-### Changes
+### What will change
+- All body text, paragraphs, buttons, navigation links, and UI elements will use Lora instead of Inter
+- Headings will remain in Playfair Display (no change)
+- The site will feel warmer and more traditional -- fitting for a family law firm
 
-**Logo**
-- Increase from `h-10 md:h-12` to `h-14 md:h-16`
+### Technical details
 
-**Desktop menu items**
-- Navigation triggers and links: increase from `text-sm` to `text-base`, and height from `h-10` to `h-12`
-- Dropdown items: increase from `text-sm` to `text-base`, padding from `py-2` to `py-2.5`
+**1. `src/index.css`** (line 5)
+- Update the Google Fonts import to load **Lora** (weights 400, 500, 600) instead of Inter
+- Update the `body` font-family rule to use Lora
 
-**CTA button**
-- Increase from `text-sm px-5 py-2.5` to `text-base px-6 py-3`
-- Phone icon from `w-4 h-4` to `w-5 h-5`
+**2. `tailwind.config.ts`**
+- Update the `fontFamily.sans` definition to use `'Lora'` as the primary font (with serif fallbacks)
 
-**Nav bar padding**
-- Increase from `py-4` to `py-5`
-
-**Mobile hamburger**
-- Increase menu icon from `w-6 h-6` to `w-7 h-7`
-
-**Only file modified:** `src/components/Header.tsx`
+These two changes will cascade across the entire site automatically.
 
