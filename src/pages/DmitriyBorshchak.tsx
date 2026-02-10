@@ -39,13 +39,18 @@ const DmitriyBorshchak = () => {
         {/* Recognition Badge */}
         <section className="section-padding-sm bg-card border-y border-border">
           <div className="container max-w-4xl">
-            <div className="flex items-center justify-center gap-4">
+            <a
+              href="https://profiles.superlawyers.com/ohio/columbus/lawyer/dmitriy-borshchak/a9cce30e-86fb-4b84-850f-f4210c6f95ea.html?npcmp=slb:badge:sl_badge:a9cce30e-86fb-4b84-850f-f4210c6f95ea:year&utm_source=a9cce30e-86fb-4b84-850f-f4210c6f95ea&utm_campaign=v2-slbadge-gray&utm_content=profile&utm_medium=dlbcounsel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-4 hover:opacity-80 transition-opacity"
+            >
               <Award className="w-10 h-10 text-primary" />
               <div className="text-center">
                 <div className="font-serif text-xl font-semibold text-primary">Super Lawyers Rising Star</div>
                 <div className="text-sm text-muted-foreground">Selected in 2023</div>
               </div>
-            </div>
+            </a>
           </div>
         </section>
 
