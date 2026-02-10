@@ -38,7 +38,7 @@ const KeriReeves = () => {
                 </p>
               </div>
             </div>
-            <div className="md:w-[45%] relative">
+            <div className="md:w-[35%] relative">
               <img
                 src={keriPhoto}
                 alt="Keri Reeves"
