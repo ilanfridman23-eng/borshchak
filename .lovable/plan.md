@@ -1,76 +1,46 @@
 
+# Increase Text Sizes Across All Pages
 
-## Elevate Dmitriy Borshchak's Profile Page
+## What Changes
+Scale up all typography throughout the site -- headings, body text, buttons, badges, and smaller text elements -- so everything reads larger and more impactful.
 
-The page currently has flat, same-tone backgrounds with no visual movement. Here's how we'll bring it to life while keeping it professional and authoritative.
+## Approach
+The site uses a centralized typography system in `src/index.css` with utility classes (`.heading-hero`, `.heading-section`, `.heading-subsection`, `.text-body`, `.text-body-sm`, `.btn-cta`, `.btn-secondary`, `.trust-badge`). By bumping sizes in these classes, most pages update automatically. For any inline/hardcoded text sizes on individual pages, those will be updated too.
 
-### 1. Hero Section -- Dark Navy Background with Staggered Fade-In Animations
+## Technical Details
 
-- Change the hero background from `bg-secondary/50` (pale cream) to a deep navy (`bg-navy`) with light text
-- Add staggered fade-in animations: the subtitle fades in first, then the name, then the bio paragraph -- each with a slight delay
-- Add a subtle gradient overlay on the photo edge for a polished blend between image and text
-- This creates immediate visual impact and authority
+### 1. Update global typography classes in `src/index.css`
 
-### 2. Recognition Badge Section -- Scroll-Triggered Fade-In
+| Class | Current | New |
+|-------|---------|-----|
+| `.heading-hero` | `text-4xl md:text-5xl lg:text-6xl` | `text-5xl md:text-6xl lg:text-7xl` |
+| `.heading-section` | `text-3xl md:text-4xl` | `text-4xl md:text-5xl` |
+| `.heading-subsection` | `text-xl md:text-2xl` | `text-2xl md:text-3xl` |
+| `.text-body` | `text-base md:text-lg` | `text-lg md:text-xl` |
+| `.text-body-sm` | `text-sm md:text-base` | `text-base md:text-lg` |
+| `.btn-cta` | `text-base` | `text-lg` |
+| `.btn-secondary` | `text-base` | `text-lg` |
+| `.trust-badge` | `text-sm` | `text-base` |
 
-- Add fade-in-up animation to the badges so they animate into view as the user scrolls down
-- Use an Intersection Observer hook to trigger animations on scroll
-- Add a subtle scale-on-hover effect to the badge links for interactivity
+### 2. Update base body font size in `src/index.css`
+- Add `font-size: 1.05rem` (or `text-[1.05rem]`) to the `body` rule for a subtle global bump.
 
-### 3. Video Section -- Alternating Background with Entrance Animation
+### 3. Update inline text sizes across pages
+Scan and bump hardcoded `text-sm`, `text-base`, `text-xs` classes in:
+- `src/pages/Divorce.tsx` -- quiz text, card descriptions, expandable cards
+- `src/pages/HankSonderman.tsx` -- tab card content (`text-base` to `text-lg`)
+- `src/pages/KeriReeves.tsx` -- same pattern
+- `src/pages/DmitriyBorshchak.tsx` -- same pattern
+- `src/pages/Index.tsx` and home section components (`HeroSection`, `TrustBlock`, `FinalCTA`, `FAQSection`, `ServicesOverview`, `WhoWeHelp`, `WhyChooseUs`, `ProcessSection`, `GoogleReviews`)
+- `src/pages/About.tsx`, `src/pages/Contact.tsx`, `src/pages/Custody.tsx`, `src/pages/Mediation.tsx`, `src/pages/Process.tsx`, `src/pages/Resources.tsx`
+- `src/components/Header.tsx` -- nav link text
+- `src/components/Footer.tsx` -- footer text
 
-- Change background to navy (`bg-navy`) to create contrast with surrounding sections
-- Add a heading above the video like "Meet Dmitriy" in white
-- Fade the video container in on scroll
+General rule for inline sizes:
+- `text-xs` becomes `text-sm`
+- `text-sm` becomes `text-base`
+- `text-base` becomes `text-lg`
+- `text-lg` becomes `text-xl`
 
-### 4. Tabs Section -- Animated Tab Content Transitions
-
-- Keep the cream background for contrast against the navy video section
-- Add a section heading like "Professional Background"
-- Animate tab content with a fade-in effect when switching between tabs
-- Add a decorative top border accent line in green
-
-### 5. New Custom Hook -- useScrollAnimation
-
-- Create a reusable `useScrollAnimation` hook using Intersection Observer
-- Returns a ref and a boolean (`isVisible`) to trigger CSS animations
-- This keeps the animation logic clean and reusable across pages
-
-### Technical Details
-
-**New file: `src/hooks/use-scroll-animation.tsx`**
-- Custom hook using `useEffect` + `IntersectionObserver`
-- Returns `{ ref, isVisible }` for any element
-
-**Modified file: `src/pages/DmitriyBorshchak.tsx`**
-- Import and use `useScrollAnimation` on 3 sections (badges, video, tabs)
-- Hero: change to `bg-navy`, white text, staggered `animate-fade-in` with `animation-delay` style props
-- Photo: add gradient overlay `bg-gradient-to-l from-transparent to-navy`
-- Badges: conditional class `opacity-0 -> animate-fade-in` on scroll
-- Video: `bg-navy` with white heading, fade-in on scroll
-- Tabs: add section heading, green accent border, fade-in on scroll
-
-**Modified file: `src/index.css`**
-- Add `animation-delay` utility classes (delay-100, delay-200, delay-300)
-- Add `opacity-0` starting state for scroll-triggered elements
-
-### Visual Flow (top to bottom)
-
-```text
-+------------------------------------------+
-|  HERO - Deep Navy BG                     |
-|  [Staggered fade-in text] | [Photo]      |
-+------------------------------------------+
-|  BADGES - Light cream, fade-in on scroll |
-+------------------------------------------+
-|  VIDEO - Navy BG, "Meet Dmitriy" heading |
-|  [Video fades in on scroll]              |
-+------------------------------------------+
-|  TABS - Cream BG, green accent border    |
-|  "Professional Background" heading       |
-|  [Content fades on tab switch]           |
-+------------------------------------------+
-```
-
-This creates a rhythm of alternating light/dark sections with purposeful motion that feels premium without being distracting.
-
+### 4. No structural or layout changes
+Only font sizes and related padding on buttons change. No colors, spacing, or component architecture is modified.
