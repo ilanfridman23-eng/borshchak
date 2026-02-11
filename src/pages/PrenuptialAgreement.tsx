@@ -374,6 +374,18 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
+        {/* Stock Photo: Couple Holding Hands */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80"
+              alt="Couple holding hands during wedding preparation"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* What a Prenup Can Do */}
         <section className="section-padding">
           <div
@@ -427,6 +439,18 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
+        {/* Stock Photo: Signing Documents */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"
+              alt="Person signing legal documents at a desk"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* Drafting a Prenup */}
         <section className="section-padding bg-card">
           <div
@@ -462,6 +486,18 @@ const PrenuptialAgreement = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Stock Photo: Happy Couple */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&q=80"
+              alt="Happy couple smiling together"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
           </div>
         </section>
 

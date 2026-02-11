@@ -396,6 +396,18 @@ const ChildSupport = () => {
           </div>
         </section>
 
+        {/* Stock Photo: Parent and Child */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1200&q=80"
+              alt="Parent and child sharing a warm moment together"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* How Child Support Is Calculated */}
         <section className="section-padding bg-navy">
           <div
@@ -426,6 +438,18 @@ const ChildSupport = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Stock Photo: Financial Planning */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
+              alt="Financial documents and planning materials on a desk"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -545,6 +569,18 @@ const ChildSupport = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Stock Photo: Family Outdoors */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1200&q=80"
+              alt="Family enjoying time together outdoors"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
           </div>
         </section>
 
