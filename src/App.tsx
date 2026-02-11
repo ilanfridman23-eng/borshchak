@@ -25,6 +25,7 @@ import PostDecreeMatters from "./pages/PostDecreeMatters";
 import SpousalSupport from "./pages/SpousalSupport";
 import ContemptProceedings from "./pages/ContemptProceedings";
 import LegalSeparation from "./pages/LegalSeparation";
+import BusinessInterests from "./pages/BusinessInterests";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/spousal-support" element={<SpousalSupport />} />
             <Route path="/contempt-proceedings" element={<ContemptProceedings />} />
             <Route path="/legal-separation" element={<LegalSeparation />} />
+            <Route path="/business-interests" element={<BusinessInterests />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
