@@ -9,8 +9,9 @@ const GoogleReviews = () => {
   const [filterRating, setFilterRating] = useState<number | null>(null);
 
   const filteredReviews = useMemo(() => {
-    if (filterRating === null) return reviews;
-    return reviews.filter((r) => r.rating === filterRating);
+    const fiveStarOnly = reviews.filter((r) => r.rating === 5);
+    if (filterRating === null) return fiveStarOnly;
+    return fiveStarOnly.filter((r) => r.rating === filterRating);
   }, [filterRating]);
 
   return (
