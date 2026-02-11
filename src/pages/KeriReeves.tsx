@@ -34,7 +34,7 @@ const KeriReeves = () => {
                   className="text-body text-xl leading-relaxed opacity-0 animate-fade-in"
                   style={{ animationDelay: "400ms" }}
                 >
-                  Keri brings a unique blend of compassion from her teaching career and a fierce drive for protecting families into the field of family law. Her journey from educator to attorney was inspired by watching her students navigate difficult family situations — and wanting to do more.
+                  Keri brings a unique blend of compassion from her teaching career and a fierce drive for protecting families into the field of family law. Her journey from educator to attorney was inspired by watching her students navigate difficult family situations and wanting to do more.
                 </p>
               </div>
             </div>
@@ -109,7 +109,7 @@ const KeriReeves = () => {
                     <div>
                       <h4 className="heading-subsection text-xl mb-1">From Teacher to Advocate</h4>
                       <p className="text-base font-medium text-muted-foreground mb-2">DeRidder High School, Louisiana</p>
-                      <p className="text-body text-lg">Keri began her career as a high school English teacher. Her favorite part of the job was her students — and those very students are the reason she became a lawyer.</p>
+                      <p className="text-body text-lg">Keri began her career as a high school English teacher. Her favorite part of the job was her students, and those very students are the reason she became a lawyer.</p>
                     </div>
                   </div>
 
@@ -119,7 +119,7 @@ const KeriReeves = () => {
                     </div>
                     <div>
                       <h4 className="heading-subsection text-xl mb-1">Inspired by Her Students</h4>
-                      <p className="text-body text-lg">Each day she watched her students walk through a plethora of family issues, including abuse and neglect, adoption, and divorce. As a teacher, she could only be a listening ear — but as an attorney she could effect change.</p>
+                      <p className="text-body text-lg">Each day she watched her students walk through a plethora of family issues, including abuse and neglect, adoption, and divorce. As a teacher, she could only be a listening ear, but as an attorney she could effect change.</p>
                     </div>
                   </div>
                 </div>

@@ -10,7 +10,7 @@ const whatALawyerDoes = [
   {
     title: "Helps You Understand the Process",
     icon: BookOpen,
-    description: "If it's your first time navigating child support, a lawyer ensures you know every step — from paperwork to hearings. They explain your rights, the actions you can take, and what to expect at each stage so the process is smooth and efficient.",
+    description: "If it's your first time navigating child support, a lawyer ensures you know every step, from paperwork to hearings. They explain your rights, the actions you can take, and what to expect at each stage so the process is smooth and efficient.",
   },
   {
     title: "Assists With Implementation",
@@ -20,7 +20,7 @@ const whatALawyerDoes = [
   {
     title: "Negotiates Payments",
     icon: HeartHandshake,
-    description: "When you can't reach an agreement with the other parent, a lawyer negotiates on your behalf — diplomatically and amicably. They can serve child support orders, argue appeals, and handle the emotional complexity so you don't have to.",
+    description: "When you can't reach an agreement with the other parent, a lawyer negotiates on your behalf, diplomatically and amicably. They can serve child support orders, argue appeals, and handle the emotional complexity so you don't have to.",
   },
   {
     title: "Safeguards Your Rights",
@@ -42,7 +42,7 @@ const filingDocuments = [
   "A divorce decree, separation agreement, or court order for child support",
   "A signed acknowledgment of paternity (where applicable)",
   "Birth certificates for all children involved",
-  "Detailed financial documents — bank statements, tax returns, proof of income and assets",
+  "Detailed financial documents: bank statements, tax returns, proof of income and assets",
 ];
 
 const quizQuestions = [
@@ -61,12 +61,12 @@ const quizQuestions = [
     question: "How long does a child support order typically last in Ohio?",
     options: [
       "Until the child turns 16",
-      "Until the child turns 18, graduates high school, or is emancipated — whichever comes last",
+      "Until the child turns 18, graduates high school, or is emancipated (whichever comes last)",
       "Until the child turns 21",
       "Only while the child is in elementary school",
     ],
     correctIndex: 1,
-    explanation: "Child support in Ohio remains active until the child turns 18, graduates from high school, or is emancipated — based on whichever event happens last. It can be extended for children with special needs.",
+    explanation: "Child support in Ohio remains active until the child turns 18, graduates from high school, or is emancipated, based on whichever event happens last. It can be extended for children with special needs.",
   },
   {
     question: "How are child support payments collected in Ohio?",
@@ -343,7 +343,7 @@ const ChildSupport = () => {
                   <h3 className="heading-subsection text-xl">The Purpose</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  The goal is to ensure both parents continue to provide and contribute to their children's wellbeing — regardless of the relationship between them.
+                  The goal is to ensure both parents continue to provide and contribute to their children's wellbeing, regardless of the relationship between them.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -536,7 +536,7 @@ const ChildSupport = () => {
             <h2 className="heading-section mb-6">How Long Does Child Support Last?</h2>
             <div className="space-y-6 text-body">
               <p>
-                Child support orders in Ohio remain active until one of the following conditions is met — whichever happens <strong>last</strong>:
+                Child support orders in Ohio remain active until one of the following conditions is met, whichever happens <strong>last</strong>:
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="card-bordered text-center">

@@ -9,12 +9,12 @@ const whatAPrenupCanDo = [
   {
     title: "Protect from Each Other's Debts",
     icon: Shield,
-    description: "If your spouse has significant debts — from loans, failed investments, or emergencies — a prenup can protect your personal assets from being seized to repay those obligations.",
+    description: "If your spouse has significant debts (from loans, failed investments, or emergencies), a prenup can protect your personal assets from being seized to repay those obligations.",
   },
   {
     title: "Set Rules on Marital Assets",
     icon: Scale,
-    description: "A prenup determines how income and assets acquired during the marriage are divided — even if only one party is directly involved in wealth creation. Both contributions (financial and domestic) are considered.",
+    description: "A prenup determines how income and assets acquired during the marriage are divided, even if only one party is directly involved in wealth creation. Both contributions (financial and domestic) are considered.",
   },
   {
     title: "Protect Family Property",
@@ -41,7 +41,7 @@ const invalidReasons = [
 const draftingPrinciples = [
   "Both parties should have independent legal representation",
   "The agreement must be equitable and fair to both parties",
-  "Include all details important to both parties — finances, inheritances, debts, children's support",
+  "Include all details important to both parties: finances, inheritances, debts, children's support",
   "All relevant Ohio laws must be considered during drafting",
 ];
 
@@ -276,13 +276,13 @@ const PrenuptialAgreement = () => {
               className="heading-hero mb-6 opacity-0 animate-fade-in"
               style={{ color: "hsl(var(--primary-foreground))", animationDelay: "250ms" }}
             >
-              Prenuptial Agreements in Columbus, OH — Protect What Matters Most
+              Prenuptial Agreements in Columbus, OH: Protect What Matters Most
             </h1>
             <p
               className="text-body text-xl leading-relaxed max-w-2xl opacity-0 animate-fade-in"
               style={{ animationDelay: "400ms" }}
             >
-              No one wants to think about divorce when planning a wedding. But a prenuptial agreement isn't about distrust — it's about clarity, fairness, and protecting your future together.
+              No one wants to think about divorce when planning a wedding. But a prenuptial agreement isn't about distrust. It's about clarity, fairness, and protecting your future together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
               <a href="tel:+13803240878" className="btn-cta">
@@ -341,7 +341,7 @@ const PrenuptialAgreement = () => {
                   <h3 className="heading-subsection text-xl">The Lawyer's Role</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  A prenuptial agreement lawyer drafts, reviews, and revises your prenup until both parties agree on its terms — ensuring it's legally sound and fair.
+                  A prenuptial agreement lawyer drafts, reviews, and revises your prenup until both parties agree on its terms, ensuring it's legally sound and fair.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -366,7 +366,7 @@ const PrenuptialAgreement = () => {
                 <div>
                   <h4 className="heading-subsection text-lg mb-2">Ohio Divorce Rate</h4>
                   <p className="text-body text-base">
-                    According to Statista, Ohio's divorce rate is <strong>2.5 per 1,000 people</strong>. While no one plans for divorce, a prenuptial agreement provides clarity and protection for both parties — and can significantly reduce conflict if a separation does occur.
+                    According to Statista, Ohio's divorce rate is <strong>2.5 per 1,000 people</strong>. While no one plans for divorce, a prenuptial agreement provides clarity and protection for both parties and can significantly reduce conflict if a separation does occur.
                   </p>
                 </div>
               </div>
@@ -505,7 +505,7 @@ const PrenuptialAgreement = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "The best time to plan for the unexpected is before it happens."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>— Planning for your future together</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Planning for your future together</p>
           </div>
         </section>
 

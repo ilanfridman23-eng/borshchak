@@ -241,7 +241,7 @@ const DmitriyBorshchak = () => {
                       <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Mayfield Village, OH
                       </div>
-                      <p className="text-body text-lg">Gained concrete experience dealing with financial risk—knowledge he uses today to help clients foresee and pinpoint issues they may face.</p>
+                      <p className="text-body text-lg">Gained concrete experience dealing with financial risk, knowledge he uses today to help clients foresee and pinpoint issues they may face.</p>
                     </div>
                   </div>
 
@@ -267,7 +267,7 @@ const DmitriyBorshchak = () => {
                       <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Columbus, OH · 2016
                       </div>
-                      <p className="text-body text-lg mb-3">Started as Law Clerk, promoted to Associate. Gained extensive experience in family law—preparing pleadings, responding to motions, and advising clients.</p>
+                      <p className="text-body text-lg mb-3">Started as Law Clerk, promoted to Associate. Gained extensive experience in family law: preparing pleadings, responding to motions, and advising clients.</p>
                       <div className="flex flex-wrap gap-2">
                         <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Pleadings & Motions</span>
                         <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Client Advisory</span>

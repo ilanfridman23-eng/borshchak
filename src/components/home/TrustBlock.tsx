@@ -38,7 +38,7 @@ const TrustBlock = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="max-w-xs">
                 <p className="text-base text-foreground italic mb-1">"{testimonial.quote}"</p>
-                <p className="text-sm text-muted-foreground">— {testimonial.author}</p>
+                <p className="text-sm text-muted-foreground">- {testimonial.author}</p>
               </div>
             ))}
           </div>

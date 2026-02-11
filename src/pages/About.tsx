@@ -52,13 +52,13 @@ const About = () => {
             <h2 className="heading-section mb-6">Our Philosophy</h2>
             <div className="space-y-6 text-body">
               <p>
-                Family law is personal. When someone walks into our office, they're not just bringing a legal problem—they're bringing fear, uncertainty, and often grief about the life they expected. We never forget that.
+                Family law is personal. When someone walks into our office, they're not just bringing a legal problem. They're bringing fear, uncertainty, and often grief about the life they expected. We never forget that.
               </p>
               <p>
                 At the same time, family law requires clear-headed strategy. Emotional decisions often lead to regrettable outcomes. Our job is to help you think through decisions rationally while honoring what you're going through emotionally.
               </p>
               <p>
-                We've built our practice on direct attorney involvement. You'll never be handed off to a paralegal for important conversations. When you call with a question, you get an answer—not a callback in three days. This approach means we take fewer cases, but we handle each one better.
+                We've built our practice on direct attorney involvement. You'll never be handed off to a paralegal for important conversations. When you call with a question, you get an answer, not a callback in three days. This approach means we take fewer cases, but we handle each one better.
               </p>
             </div>
           </div>

@@ -78,11 +78,11 @@ const quizQuestions = [
     options: [
       "Always 50/50",
       "The higher earner gets more",
-      "Equitably — fair but not always equal",
+      "Equitably: fair but not always equal",
       "The court doesn't get involved",
     ],
     correctIndex: 2,
-    explanation: "Ohio uses equitable distribution, meaning the court aims for a fair division considering each party's contributions — but it's not always an equal 50/50 split.",
+    explanation: "Ohio uses equitable distribution, meaning the court aims for a fair division considering each party's contributions, but it's not always an equal 50/50 split.",
   },
 ];
 
@@ -372,7 +372,7 @@ const Divorce = () => {
                 <div>
                   <h4 className="heading-subsection text-lg mb-2">Ohio Residency Requirement</h4>
                   <p className="text-body text-base">
-                    To file for either divorce or dissolution in Ohio, either you or your spouse must have lived in the state for at least <strong>six months</strong>. For a no-fault dissolution, you don't need to prove wrongdoing — only that the marriage can't be saved.
+                    To file for either divorce or dissolution in Ohio, either you or your spouse must have lived in the state for at least <strong>six months</strong>. For a no-fault dissolution, you don't need to prove wrongdoing, only that the marriage can't be saved.
                   </p>
                 </div>
               </div>
@@ -393,7 +393,7 @@ const Divorce = () => {
               <div className="space-y-4">
                 <h3 className="heading-subsection">Choosing the Right Path Forward</h3>
                 <p className="text-body">
-                  Whether you pursue a fault-based divorce or a no-fault dissolution, the decision shapes every aspect of the process — from timelines and costs to how assets are divided. Our attorneys help you evaluate your options so you can move forward with confidence.
+                  Whether you pursue a fault-based divorce or a no-fault dissolution, the decision shapes every aspect of the process, from timelines and costs to how assets are divided. Our attorneys help you evaluate your options so you can move forward with confidence.
                 </p>
               </div>
             </div>
@@ -433,7 +433,7 @@ const Divorce = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "Justice cannot be for one side alone, but must be for both."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>— Eleanor Roosevelt</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Eleanor Roosevelt</p>
           </div>
         </section>
 
@@ -458,7 +458,7 @@ const Divorce = () => {
                   </h3>
                 </div>
                 <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
-                  Ohio courts use equitable distribution — fair but not always equal. Marital property includes assets acquired during the marriage. The court may consider misconduct (such as wasting marital funds) when dividing property.
+                  Ohio courts use equitable distribution: fair but not always equal. Marital property includes assets acquired during the marriage. The court may consider misconduct (such as wasting marital funds) when dividing property.
                 </p>
               </div>
 
@@ -470,7 +470,7 @@ const Divorce = () => {
                   </h3>
                 </div>
                 <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
-                  Spousal support isn't automatic in Ohio. When parties can't agree, the court decides eligibility, amount, and duration — ensuring both parties can maintain a reasonable standard of living.
+                  Spousal support isn't automatic in Ohio. When parties can't agree, the court decides eligibility, amount, and duration, ensuring both parties can maintain a reasonable standard of living.
                 </p>
               </div>
 
