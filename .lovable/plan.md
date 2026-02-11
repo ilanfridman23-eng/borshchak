@@ -1,63 +1,36 @@
 
 
-# Diversify Stock Photo Layouts Across Legal Services Pages
+# Testimonials Page
 
-Replace the repetitive centered image blocks with 6 different layout styles, ensuring no two consecutive images on any page use the same treatment.
+## Overview
+Create a dedicated Testimonials page featuring the provided video testimonial prominently, combined with the existing Google Reviews carousel, award logos, and a hero section -- all modeled after the original site's testimonials page.
 
-## Layout Styles
+## Page Structure
 
-### Style 1: Full-Bleed Background with Quote Overlay
-Image spans full width with a dark overlay and a short relevant quote or stat centered on top in white text.
+1. **Hero Section** -- Full-width background image (reusing `happy-family.jpg`) with overlay text: "Testimonials for Borshchak Law Group" heading, a subtitle about alleviating stress, and a "Leave us a Google review" CTA button linking to the Google Maps listing.
 
-### Style 2: Side-by-Side (Image Left, Text Right)
-Two-column layout -- image on the left (roughly 50%), short contextual paragraph on the right.
+2. **Award Logos Bar** -- Reuse the existing `AwardLogos` component directly beneath the hero.
 
-### Style 3: Side-by-Side (Text Left, Image Right)
-Reverse of Style 2 -- text block on the left, image on the right.
+3. **Featured Video Testimonial** -- A large, prominent section with the embedded YouTube video (`https://www.youtube.com/embed/AHfY54OdW2E`) centered, with a heading like "Hear From Our Clients" and a brief intro line. Styled similarly to the existing `VideoSection` but with more visual weight (larger max-width, accent border or background treatment).
 
-### Style 4: Full-Bleed Edge-to-Edge (No Container)
-Image spans the full viewport width with no container or rounded corners -- a bold visual break.
+4. **Google Reviews Section** -- Reuse the existing `GoogleReviews` component (filterable carousel with rating distribution, review cards, and detail modal).
 
-### Style 5: Offset Image with Accent Block
-Image slightly narrower with a colored accent block (navy or green) peeking behind it on one side for visual depth.
-
-### Style 6: Image with Caption Bar
-Centered image (current style) but with a subtle caption bar below it -- a short contextual note in muted text.
-
-## Assignment Per Page
-
-### Divorce Page (3 images)
-1. After Divorce vs. Dissolution -- **Style 2** (image left, short text about choosing the right path)
-2. After fault grounds -- **Style 1** (full-bleed background with a quote about justice)
-3. Before quiz -- **Style 5** (offset with navy accent block)
-
-### Child Custody Page (3 images)
-1. After custody allocation -- **Style 3** (text left about protecting your family, image right)
-2. After court factors -- **Style 4** (full-bleed edge-to-edge)
-3. Before quiz -- **Style 6** (image with caption bar)
-
-### Child Support Page (3 images)
-1. After lawyer roles -- **Style 1** (full-bleed background with a stat about Ohio child support)
-2. After calculation factors -- **Style 5** (offset with green accent block)
-3. Before quiz -- **Style 2** (image left, encouraging text right)
-
-### Prenuptial Agreement Page (3 images)
-1. After "What Is a Prenup" -- **Style 4** (full-bleed edge-to-edge)
-2. After invalidation section -- **Style 3** (text left, image right)
-3. Before quiz -- **Style 1** (full-bleed background with a quote about planning ahead)
+5. **Final CTA** -- Reuse the existing `FinalCTA` component for a consultation call-to-action at the bottom.
 
 ## Technical Details
 
-### Files Modified
-- `src/pages/Divorce.tsx` -- replace 3 image sections
-- `src/pages/Custody.tsx` -- replace 3 image sections
-- `src/pages/ChildSupport.tsx` -- replace 3 image sections
-- `src/pages/PrenuptialAgreement.tsx` -- replace 3 image sections
+### New Files
+- `src/pages/Testimonials.tsx` -- New page component composing Header, hero, AwardLogos, video section, GoogleReviews, FinalCTA, and Footer.
 
-### Styling Approach
-- All layouts use responsive design (stack vertically on mobile for side-by-side layouts)
-- Full-bleed backgrounds use `bg-cover bg-center` with a semi-transparent navy overlay
-- Offset accent blocks use `relative`/`absolute` positioning
-- Same Unsplash image URLs are retained -- only the presentation changes
-- No new dependencies required
+### Modified Files
+- `src/App.tsx` -- Add route: `/testimonials` pointing to the new `Testimonials` page.
+- `src/components/Header.tsx` -- Update the navigation to include a "Testimonials" link (if not already present).
+
+### Patterns Followed
+- Same Header/Footer wrapper as all other pages
+- Playfair Display for headings, Lora for body text
+- Deep slate navy, warm cream, forest green accent palette
+- Scroll-triggered animations via `useScrollAnimation`
+- Framer Motion for entrance animations
+- Mobile-first responsive layout
 
