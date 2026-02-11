@@ -1,46 +1,41 @@
 
-# Redesign Google Reviews Section
+# Add Unique Images to Blog Posts
 
 ## Overview
-Replace the current compact 3-card carousel with a more immersive, detailed layout that gives each review more breathing room and visual impact.
+Generate 10 unique, professional images -- one for each blog post -- using the AI image generation tool (Nano banana). Each image will be tailored to the post's topic (custody, divorce, finances, etc.) and saved as project assets. The blog card layout will be updated to display the image prominently above each post's content.
 
-## New Design
+## Image Plan
 
-### 1. Featured Review Spotlight
-The top 5-star reviews will rotate in a large "spotlight" area -- a single review displayed prominently with:
-- Large avatar initial (colored background)
-- Full review text (no truncation)
-- Bigger star display and reviewer name
-- A large opening quotation mark as a decorative element
-- Subtle green accent left border
+Each post will get a thematic image:
 
-### 2. Review Grid Below
-Replace the 3-card paginated carousel with a scrollable grid showing **all reviews** at once (no pagination needed):
-- **2-column layout** on desktop, single column on mobile
-- Each card shows the **full review text** (no `line-clamp`)
-- Larger cards with more padding, bigger text, and a Google "G" icon watermark
-- Verified Google Review badge on each card
-- Staggered fade-in animations on scroll
+| # | Post Topic | Image Concept |
+|---|-----------|---------------|
+| 1 | Child Custody Across State Lines | Parent holding child's hand near a map/road |
+| 2 | Questions Before Filing for Divorce | Person reviewing documents at a desk |
+| 3 | Ohio Judges & Fair Settlements | Courtroom with judge's gavel and scales |
+| 4 | Risks of Moving Out During Divorce | Empty room with moving boxes and keys |
+| 5 | Filing for Divorce Out of State | Ohio state outline with legal documents |
+| 6 | Divorce & College Expenses | Graduation cap on stack of financial papers |
+| 7 | Inheritance in Divorce | Family heirloom/jewelry with legal documents |
+| 8 | Alimony Disputes | Two people in mediation/negotiation setting |
+| 9 | Fast-Tracking Dissolution | Calendar with clock, signifying speed |
+| 10 | Key Evidence for Divorce | Organized evidence folder with documents |
 
-### 3. Stats Header (Simplified)
-- Keep the Google logo + rating number + stars + total count
-- Move the rating distribution bar chart into a collapsible/expandable section to reduce visual clutter
-- Keep the filter-by-rating functionality
+## Technical Changes
 
-### 4. "Read More on Google" CTA
-Add a button at the bottom linking to the Google Maps listing to see all 160 reviews.
+### New Assets (10 files)
+- `src/assets/blog-custody-state-lines.jpg`
+- `src/assets/blog-questions-before-divorce.jpg`
+- `src/assets/blog-judges-fair-settlements.jpg`
+- `src/assets/blog-moving-out-risks.jpg`
+- `src/assets/blog-filing-out-of-state.jpg`
+- `src/assets/blog-college-expenses.jpg`
+- `src/assets/blog-inheritance-divorce.jpg`
+- `src/assets/blog-alimony-disputes.jpg`
+- `src/assets/blog-fast-track-dissolution.jpg`
+- `src/assets/blog-evidence-essentials.jpg`
 
-## Technical Details
-
-### Files Modified
-- **`src/components/home/GoogleReviews.tsx`** -- Complete redesign of the component layout:
-  - Add a featured spotlight review section with rotating highlights
-  - Replace paginated carousel with a full scrollable grid
-  - Remove `line-clamp-4` so full text is always shown
-  - Add decorative quote marks and Google badge elements
-  - Add collapsible rating distribution
-  - Add "Read More on Google" CTA button
-  - Use framer-motion for staggered card entrance animations
-
-### No Other Files Changed
-The Testimonials page already imports `GoogleReviews` so no routing or page changes needed.
+### Modified File: `src/pages/Resources.tsx`
+- Add an `image` field to each blog post object importing the corresponding asset
+- Update the card layout to include the image at the top of each card with a consistent aspect ratio, rounded top corners, and a subtle zoom-on-hover effect
+- The card structure becomes: image -> category/date -> title -> excerpt -> "Read More"
