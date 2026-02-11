@@ -1,41 +1,118 @@
 
-# Add Unique Images to Blog Posts
+# Recreate Blog Posts as Internal Pages
 
 ## Overview
-Generate 10 unique, professional images -- one for each blog post -- using the AI image generation tool (Nano banana). Each image will be tailored to the post's topic (custody, divorce, finances, etc.) and saved as project assets. The blog card layout will be updated to display the image prominently above each post's content.
+Convert the 10 blog posts from external links to internal pages hosted on the site, using the exact same text content from each article. Each blog post will be a dedicated page with a clean, readable article layout. The Resources page links will be updated to point to internal routes instead of external URLs.
 
-## Image Plan
+## What Will Change
 
-Each post will get a thematic image:
+### 1. New Shared Blog Post Layout Component
+Create a reusable `BlogPost` component (`src/components/BlogPost.tsx`) that provides a consistent article layout for all 10 posts:
+- Hero section with the post's featured image, title, category badge, and date
+- Clean, readable article body with proper heading hierarchy (h2, h3), paragraphs, lists, tables, and FAQ sections
+- A "Back to Blog" link at the top
+- CTA section at the bottom with a phone call button
+- Legal disclaimer
+- Uses existing typography classes (heading-hero, text-body, section-padding)
 
-| # | Post Topic | Image Concept |
-|---|-----------|---------------|
-| 1 | Child Custody Across State Lines | Parent holding child's hand near a map/road |
-| 2 | Questions Before Filing for Divorce | Person reviewing documents at a desk |
-| 3 | Ohio Judges & Fair Settlements | Courtroom with judge's gavel and scales |
-| 4 | Risks of Moving Out During Divorce | Empty room with moving boxes and keys |
-| 5 | Filing for Divorce Out of State | Ohio state outline with legal documents |
-| 6 | Divorce & College Expenses | Graduation cap on stack of financial papers |
-| 7 | Inheritance in Divorce | Family heirloom/jewelry with legal documents |
-| 8 | Alimony Disputes | Two people in mediation/negotiation setting |
-| 9 | Fast-Tracking Dissolution | Calendar with clock, signifying speed |
-| 10 | Key Evidence for Divorce | Organized evidence folder with documents |
+### 2. New Blog Data File
+Create `src/data/blogPosts.ts` to centralize all blog post data:
+- Each post gets a unique slug (e.g., `custody-state-lines`, `questions-before-divorce`)
+- Stores metadata (title, excerpt, date, category, image) and the full article content as structured data (arrays of content sections with type: paragraph, heading, list, table, faq)
+- This keeps the content organized and makes it easy to add more posts later
 
-## Technical Changes
+### 3. Ten New Blog Post Content Files
+Create individual content files under `src/data/blog/` -- one per post -- to keep file sizes manageable:
+- `custody-state-lines.ts`
+- `questions-before-divorce.ts`
+- `judges-fair-settlements.ts`
+- `moving-out-risks.ts`
+- `filing-out-of-state.ts`
+- `college-expenses.ts`
+- `inheritance-divorce.ts`
+- `alimony-disputes.ts`
+- `fast-track-dissolution.ts`
+- `evidence-essentials.ts`
 
-### New Assets (10 files)
-- `src/assets/blog-custody-state-lines.jpg`
-- `src/assets/blog-questions-before-divorce.jpg`
-- `src/assets/blog-judges-fair-settlements.jpg`
-- `src/assets/blog-moving-out-risks.jpg`
-- `src/assets/blog-filing-out-of-state.jpg`
-- `src/assets/blog-college-expenses.jpg`
-- `src/assets/blog-inheritance-divorce.jpg`
-- `src/assets/blog-alimony-disputes.jpg`
-- `src/assets/blog-fast-track-dissolution.jpg`
-- `src/assets/blog-evidence-essentials.jpg`
+Each file exports the full article content (exact text from the original posts), structured as sections with headings, paragraphs, bullet lists, and tables.
 
-### Modified File: `src/pages/Resources.tsx`
-- Add an `image` field to each blog post object importing the corresponding asset
-- Update the card layout to include the image at the top of each card with a consistent aspect ratio, rounded top corners, and a subtle zoom-on-hover effect
-- The card structure becomes: image -> category/date -> title -> excerpt -> "Read More"
+### 4. New Blog Post Page Component
+Create `src/pages/BlogPostPage.tsx`:
+- Uses `react-router-dom` `useParams` to get the post slug from the URL
+- Looks up the matching post data from the centralized data file
+- Renders the `BlogPost` layout component with the post's content
+- Shows a 404/not found state if the slug doesn't match any post
+
+### 5. Update Routes in App.tsx
+Add a single dynamic route:
+```
+/blog/:slug
+```
+This handles all 10 posts (and any future ones) with one route definition.
+
+### 6. Update Resources Page
+- Change the `href` for each post from external URLs to internal `/blog/{slug}` paths
+- Change the `<a>` tags from external links to React Router `<Link>` components (removes `target="_blank"`)
+- Update the `blogPosts` array to use slugs instead of external hrefs
+
+## Article Layout Design
+Each blog post page will feature:
+- Full-width hero image at the top
+- Title, category badge, and date overlaid or below the image
+- Article body in a readable single-column layout (max-w-3xl, centered)
+- Proper semantic HTML: h2 for section headings, p for paragraphs, ul/li for lists, table for data tables
+- Blockquote styling for FAQ answers
+- Bottom CTA section matching the site's existing style
+
+## Technical Details
+
+### File Structure
+```
+src/
+  components/
+    BlogPost.tsx          (new - reusable article layout)
+  data/
+    blogPosts.ts          (new - centralized post index with slugs)
+    blog/
+      custody-state-lines.ts
+      questions-before-divorce.ts
+      judges-fair-settlements.ts
+      moving-out-risks.ts
+      filing-out-of-state.ts
+      college-expenses.ts
+      inheritance-divorce.ts
+      alimony-disputes.ts
+      fast-track-dissolution.ts
+      evidence-essentials.ts
+  pages/
+    BlogPostPage.tsx      (new - dynamic page component)
+    Resources.tsx          (modified - internal links)
+  App.tsx                  (modified - add /blog/:slug route)
+```
+
+### Content Structure Per Blog Post
+Each content file will export an object like:
+```typescript
+{
+  slug: "custody-state-lines",
+  title: "Enforcing Ohio Child Custody Orders...",
+  excerpt: "...",
+  date: "February 10, 2026",
+  category: "Child Custody",
+  image: blogCustodyStateLines,
+  sections: [
+    { type: "paragraph", content: "..." },
+    { type: "heading", content: "..." },
+    { type: "paragraph", content: "..." },
+    { type: "list", items: ["...", "..."] },
+    { type: "table", headers: [...], rows: [[...], [...]] },
+    { type: "faq", items: [{ question: "...", answer: "..." }] }
+  ]
+}
+```
+
+### Routing
+- `/resources` -- Blog listing page (existing, updated with internal links)
+- `/blog/:slug` -- Individual blog post pages (new)
+
+All 10 articles will use the exact same text content from the original dlbcounsel.com blog posts, just redesigned to match the site's existing visual style.
