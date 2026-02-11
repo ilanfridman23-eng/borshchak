@@ -1,234 +1,48 @@
 import { useState, useMemo } from "react";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
-import { reviews, getReviewStats, Review } from "@/data/reviews";
-import { cn } from "@/lib/utils";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { ExternalLink } from "lucide-react";
+import { reviews } from "@/data/reviews";
+import ReviewStatsHeader from "./reviews/ReviewStatsHeader";
+import FeaturedReview from "./reviews/FeaturedReview";
+import ReviewCard from "./reviews/ReviewCard";
 
 const GoogleReviews = () => {
-  const [currentPage, setCurrentPage] = useState(0);
   const [filterRating, setFilterRating] = useState<number | null>(null);
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const reviewsPerPage = 3;
-  
-  const stats = useMemo(() => getReviewStats(), []);
-  
+
   const filteredReviews = useMemo(() => {
     if (filterRating === null) return reviews;
-    return reviews.filter(r => r.rating === filterRating);
+    return reviews.filter((r) => r.rating === filterRating);
   }, [filterRating]);
-  
-  const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage);
-  const currentReviews = filteredReviews.slice(
-    currentPage * reviewsPerPage,
-    (currentPage + 1) * reviewsPerPage
-  );
-
-  const renderStars = (rating: number) => {
-    return (
-      <div className="flex gap-0.5">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={cn(
-              "w-4 h-4",
-              star <= rating
-                ? "fill-yellow-400 text-yellow-400"
-                : "fill-gray-200 text-gray-200"
-            )}
-          />
-        ))}
-      </div>
-    );
-  };
-
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-  };
 
   return (
     <section className="py-16 md:py-24 bg-secondary/30">
-      <div className="container">
-        {/* Header with Stats */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <img 
-              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-              alt="Google" 
-              className="h-8 w-auto"
-            />
-            <span className="text-3xl font-medium text-muted-foreground">Reviews</span>
-          </div>
-          
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="text-6xl font-bold text-foreground">{stats.average}</span>
-            <div className="text-left">
-              <div className="flex gap-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className={cn(
-                      "w-6 h-6",
-                      star <= Math.round(stats.average)
-                        ? "fill-yellow-400 text-yellow-400"
-                        : "fill-gray-200 text-gray-200"
-                    )}
-                  />
-                ))}
-              </div>
-              <p className="text-muted-foreground text-base mt-1">
-                Based on {stats.total} reviews
-              </p>
-            </div>
-          </div>
+      <div className="container max-w-5xl">
+        <ReviewStatsHeader
+          filterRating={filterRating}
+          onFilterChange={setFilterRating}
+        />
 
-          {/* Rating Distribution */}
-          <div className="max-w-md mx-auto space-y-2 mb-8">
-            {[5, 4, 3, 2, 1].map((rating) => {
-              const count = stats.distribution[rating as keyof typeof stats.distribution];
-              const percentage = (count / stats.total) * 100;
-              const isActive = filterRating === rating;
-              
-              return (
-                <button
-                  key={rating}
-                  onClick={() => {
-                    setFilterRating(isActive ? null : rating);
-                    setCurrentPage(0);
-                  }}
-                  className={cn(
-                    "flex items-center gap-3 w-full group transition-opacity",
-                    filterRating !== null && !isActive && "opacity-40"
-                  )}
-                >
-                  <span className="text-base w-12 text-left text-muted-foreground group-hover:text-foreground">
-                    {rating} star{rating !== 1 && "s"}
-                  </span>
-                  <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-yellow-400 rounded-full transition-all"
-                      style={{ width: `${percentage}%` }}
-                    />
-                  </div>
-                  <span className="text-base w-10 text-right text-muted-foreground">
-                    {count}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+        {/* Featured Spotlight (only when unfiltered) */}
+        {filterRating === null && <FeaturedReview />}
 
-          {filterRating && (
-            <button
-              onClick={() => {
-                setFilterRating(null);
-                setCurrentPage(0);
-              }}
-              className="text-base text-primary hover:underline mb-4"
-            >
-              Clear filter
-            </button>
-          )}
+        {/* All Reviews Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {filteredReviews.map((review, index) => (
+            <ReviewCard key={review.id} review={review} index={index} />
+          ))}
         </div>
 
-        {/* Reviews Carousel with Side Arrows */}
-        <div className="relative flex items-center">
-          {/* Left Arrow */}
-          <button
-            onClick={prevPage}
-            className="absolute left-0 z-10 -ml-4 lg:-ml-6 p-3 rounded-full bg-background shadow-lg border border-border hover:bg-secondary text-foreground transition-colors"
-            aria-label="Previous reviews"
+        {/* Read More CTA */}
+        <div className="text-center mt-12">
+          <a
+            href="https://www.google.com/maps/place/Borshchak+Law+Group/@39.9612,-82.9988,17z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-base font-medium"
           >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
-          {/* Reviews Grid */}
-          <div className="flex-1 mx-8 lg:mx-12">
-            <div className="grid md:grid-cols-3 gap-6">
-              {currentReviews.map((review, index) => (
-                <div
-                  key={review.id}
-                  onClick={() => setSelectedReview(review)}
-                  className="bg-background rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow animate-fade-in cursor-pointer"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold flex-shrink-0">
-                      {review.name.charAt(0)}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-medium text-lg text-foreground truncate">{review.name}</h4>
-                      <div className="flex items-center gap-2 mt-1">
-                        {renderStars(review.rating)}
-                        <span className="text-sm text-muted-foreground">{review.date}</span>
-                      </div>
-                      {review.isLocalGuide && (
-                        <span className="text-sm text-muted-foreground">
-                          Local Guide · {review.reviewCount}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground text-base leading-relaxed line-clamp-4">
-                    {review.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Arrow */}
-          <button
-            onClick={nextPage}
-            className="absolute right-0 z-10 -mr-4 lg:-mr-6 p-3 rounded-full bg-background shadow-lg border border-border hover:bg-secondary text-foreground transition-colors"
-            aria-label="Next reviews"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+            Read All 160 Reviews on Google
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
-
-        {/* Page indicator */}
-        <p className="text-center text-base text-muted-foreground mt-8">
-          {currentPage + 1} of {totalPages} · {filteredReviews.length} reviews
-        </p>
-
-        {/* Review Detail Modal */}
-        <Dialog open={!!selectedReview} onOpenChange={() => setSelectedReview(null)}>
-          <DialogContent className="max-w-lg">
-            {selectedReview && (
-              <>
-                <DialogHeader>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-xl">
-                      {selectedReview.name.charAt(0)}
-                    </div>
-                    <div>
-                      <DialogTitle className="text-left">{selectedReview.name}</DialogTitle>
-                      <div className="flex items-center gap-2 mt-1">
-                        {renderStars(selectedReview.rating)}
-                        <span className="text-sm text-muted-foreground">{selectedReview.date}</span>
-                      </div>
-                    </div>
-                  </div>
-                </DialogHeader>
-                <div className="mt-4">
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {selectedReview.text}
-                  </p>
-                </div>
-              </>
-            )}
-          </DialogContent>
-        </Dialog>
       </div>
     </section>
   );
