@@ -66,7 +66,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
               <p className="text-xl font-medium drop-shadow-md">
                 "They helped us through the most difficult time in our lives."
               </p>
-              <p className="text-base text-white/80 mt-2">— Former Client</p>
+              <p className="text-base text-white/80 mt-2">- Former Client</p>
             </div>
           </div>
           

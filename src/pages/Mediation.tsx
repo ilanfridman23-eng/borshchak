@@ -65,7 +65,7 @@ const Mediation = () => {
                 However, mediation isn't appropriate in every situation. If there's a significant power imbalance, hidden assets, or safety concerns, litigation may be necessary to protect your interests. We'll give you an honest assessment during your consultation.
               </p>
               <p>
-                Even in mediation, you need your own attorney. We attend sessions with you, ensure proposed agreements are fair, and catch issues before you sign anything. Our goal is resolution—but not at the expense of your rights.
+                Even in mediation, you need your own attorney. We attend sessions with you, ensure proposed agreements are fair, and catch issues before you sign anything. Our goal is resolution, but not at the expense of your rights.
               </p>
             </div>
           </div>

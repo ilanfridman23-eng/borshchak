@@ -36,7 +36,7 @@ export const reviews: Review[] = [
     name: "Darnley Etienne",
     rating: 5,
     date: "4 months ago",
-    text: "From our first meeting, I felt confident in Dmitriy's ability to handle my case… Ethical, compassionate, and results-driven— Dmitriy set a new standard for what I expect from the legal profession."
+    text: "From our first meeting, I felt confident in Dmitriy's ability to handle my case… Ethical, compassionate, and results-driven. Dmitriy set a new standard for what I expect from the legal profession."
   },
   {
     id: 5,

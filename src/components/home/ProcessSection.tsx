@@ -7,7 +7,7 @@ const steps = [
     number: "1",
     title: "Free Consultation",
     shortDesc: "Understand your situation",
-    fullDesc: "Schedule a confidential call with our team. We'll listen to your story, answer your questions, and help you understand your legal options—no pressure, no obligation.",
+    fullDesc: "Schedule a confidential call with our team. We'll listen to your story, answer your questions, and help you understand your legal options. No pressure, no obligation.",
     icon: Phone,
     details: [
       "30-minute confidential call",

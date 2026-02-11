@@ -15,7 +15,7 @@ const custodyTypes = [
   {
     title: "Legal Custody",
     icon: Scale,
-    description: "Legal custody refers to the right to make major decisions about the child's life — including education, healthcare, religious upbringing, and extracurricular activities. A parent with legal custody has authority over these important choices.",
+    description: "Legal custody refers to the right to make major decisions about the child's life, including education, healthcare, religious upbringing, and extracurricular activities. A parent with legal custody has authority over these important choices.",
   },
   {
     title: "Sole Physical Custody",
@@ -25,7 +25,7 @@ const custodyTypes = [
   {
     title: "Joint Physical Custody",
     icon: Users,
-    description: "Joint physical custody means the child splits time living with both parents. The schedule doesn't have to be exactly 50/50 — it's designed around the child's best interests and each parent's availability and living situation.",
+    description: "Joint physical custody means the child splits time living with both parents. The schedule doesn't have to be exactly 50/50. It's designed around the child's best interests and each parent's availability and living situation.",
   },
   {
     title: "Sole Legal Custody",
@@ -40,7 +40,7 @@ const custodyTypes = [
   {
     title: "Grandparent Visitation Rights",
     icon: Heart,
-    description: "In Ohio, grandparents can petition the court for visitation rights under certain circumstances — such as when the child's parents are divorced, separated, or when one parent is deceased. The court must find that visitation serves the child's best interest.",
+    description: "In Ohio, grandparents can petition the court for visitation rights under certain circumstances, such as when the child's parents are divorced, separated, or when one parent is deceased. The court must find that visitation serves the child's best interest.",
   },
 ];
 
@@ -336,7 +336,7 @@ const Custody = () => {
                   <h3 className="heading-subsection text-xl">Shared Parenting</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  Both parents divide rights and responsibilities through a shared parenting plan approved by the court. This doesn't always mean equal time — it's about shared decision-making.
+                  Both parents divide rights and responsibilities through a shared parenting plan approved by the court. This doesn't always mean equal time. It's about shared decision-making.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -458,7 +458,7 @@ const Custody = () => {
             <h2 className="heading-section mb-6">Modifying a Custody Order</h2>
             <div className="space-y-6 text-body">
               <p>
-                Life changes — and sometimes custody orders need to change too. Ohio courts allow modifications when circumstances have significantly changed since the original order was issued.
+                Life changes, and sometimes custody orders need to change too. Ohio courts allow modifications when circumstances have significantly changed since the original order was issued.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="card-bordered text-center">
@@ -509,7 +509,7 @@ const Custody = () => {
               loading="lazy"
             />
             <p className="mt-3 text-center text-body-sm italic">
-              Every custody decision centers on one priority — your child's happiness and stability.
+              Every custody decision centers on one priority: your child's happiness and stability.
             </p>
           </div>
         </section>

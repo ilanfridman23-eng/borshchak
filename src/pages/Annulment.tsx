@@ -15,12 +15,12 @@ const annulmentGrounds = [
   {
     title: "Forced Consent",
     icon: ShieldAlert,
-    description: "One party entered the marriage unwillingly or through threats. Legal marriage must be based on free consent — if coercion is proven, the marriage qualifies for annulment.",
+    description: "One party entered the marriage unwillingly or through threats. Legal marriage must be based on free consent. If coercion is proven, the marriage qualifies for annulment.",
   },
   {
     title: "Fraud",
     icon: UserX,
-    description: "One party entered the marriage based on lies told by the other — such as claiming a false identity or a fabricated pregnancy. The fraud must go to the essence of the marriage.",
+    description: "One party entered the marriage based on lies told by the other, such as claiming a false identity or a fabricated pregnancy. The fraud must go to the essence of the marriage.",
   },
   {
     title: "Underage Marriage",
@@ -30,7 +30,7 @@ const annulmentGrounds = [
   {
     title: "Mental Incapacity",
     icon: Brain,
-    description: "Either spouse was mentally incompetent due to drugs, alcohol, or other conditions and could not make informed consent — and did not continue the marriage after mental capacity was restored.",
+    description: "Either spouse was mentally incompetent due to drugs, alcohol, or other conditions and could not make informed consent, and did not continue the marriage after mental capacity was restored.",
   },
   {
     title: "Lack of Consummation",
@@ -43,12 +43,12 @@ const differences = [
   {
     aspect: "Cost",
     divorce: "Generally more expensive due to complexity of asset division, custody, and support proceedings.",
-    annulment: "Typically less expensive — the marriage is treated as if it never existed.",
+    annulment: "Typically less expensive because the marriage is treated as if it never existed.",
   },
   {
     aspect: "Spousal Support",
     divorce: "The court may award alimony and divide assets equitably between spouses.",
-    annulment: "No spousal support — because the marriage is declared void from the start.",
+    annulment: "No spousal support, because the marriage is declared void from the start.",
   },
   {
     aspect: "Filing Timeline",
@@ -58,7 +58,7 @@ const differences = [
   {
     aspect: "Property Division",
     divorce: "Marital property is divided equitably by the court.",
-    annulment: "No marital property to divide — assets return to their original owners.",
+    annulment: "No marital property to divide. Assets return to their original owners.",
   },
 ];
 
@@ -72,7 +72,7 @@ const quizQuestions = [
       "Converts a marriage into a civil union",
     ],
     correctIndex: 1,
-    explanation: "An annulment cancels a marriage from a legal perspective — meaning the marriage was never valid or technically never existed.",
+    explanation: "An annulment cancels a marriage from a legal perspective, meaning the marriage was never valid or technically never existed.",
   },
   {
     question: "How long do you have to file for an annulment in Ohio?",
@@ -294,7 +294,7 @@ const Annulment = () => {
               className="text-body text-xl leading-relaxed max-w-2xl opacity-0 animate-fade-in"
               style={{ animationDelay: "400ms" }}
             >
-              An annulment declares a marriage legally void — as if it never existed. If your marriage was entered under fraud, coercion, or other qualifying conditions, our attorneys can help you pursue an annulment in Ohio.
+              An annulment declares a marriage legally void, as if it never existed. If your marriage was entered under fraud, coercion, or other qualifying conditions, our attorneys can help you pursue an annulment in Ohio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
               <a href="tel:+13803240878" className="btn-cta">
@@ -431,7 +431,7 @@ const Annulment = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "It's a verified war strategy to never go to a battlefield alone."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>— Let our attorneys stand with you</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Let our attorneys stand with you</p>
           </div>
         </section>
 
@@ -447,7 +447,7 @@ const Annulment = () => {
                 Court hearings can be daunting, especially when emotions are involved. At Borshchak Law Group, we provide you with a strong attorney-client relationship to ensure your grounds for marriage annulment are solid and give you the best possible outcome.
               </p>
               <p>
-                Our expert annulment attorneys will walk you through the court proceedings and present a compelling case for annulment. You must file within <strong>two years</strong> of the marriage date — don't wait to explore your options.
+                Our expert annulment attorneys will walk you through the court proceedings and present a compelling case for annulment. You must file within <strong>two years</strong> of the marriage date. Don't wait to explore your options.
               </p>
             </div>
             <div className="mt-8">

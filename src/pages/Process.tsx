@@ -22,7 +22,7 @@ const steps = [
     icon: FileText,
     title: "Case Strategy",
     subtitle: "Weeks 1-2",
-    description: "If you choose to work with us, we immediately gather the information needed to build your case. We'll develop a legal strategy tailored to your goals, timeline, and budget—then present it for your approval.",
+    description: "If you choose to work with us, we immediately gather the information needed to build your case. We'll develop a legal strategy tailored to your goals, timeline, and budget, then present it for your approval.",
     details: [
       "Document collection and review",
       "Financial analysis and discovery planning",
@@ -35,7 +35,7 @@ const steps = [
     icon: Scale,
     title: "Skilled Execution",
     subtitle: "Duration varies by case",
-    description: "We handle all legal filings, court appearances, negotiations, and communication with opposing counsel. You'll receive regular updates and be consulted on all significant decisions—nothing happens without your knowledge.",
+    description: "We handle all legal filings, court appearances, negotiations, and communication with opposing counsel. You'll receive regular updates and be consulted on all significant decisions. Nothing happens without your knowledge.",
     details: [
       "Direct attorney communication",
       "Regular case status updates",
@@ -48,7 +48,7 @@ const steps = [
     icon: CheckCircle,
     title: "Resolution & Beyond",
     subtitle: "Final steps and ongoing support",
-    description: "We ensure your final agreements or court orders are properly documented, filed, and enforceable. If issues arise later—modifications, enforcement, or new circumstances—we're here to help.",
+    description: "We ensure your final agreements or court orders are properly documented, filed, and enforceable. If issues arise later (modifications, enforcement, or new circumstances), we're here to help.",
     details: [
       "Final order review and filing",
       "Asset transfer coordination",
@@ -98,7 +98,7 @@ const Process = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h2 className="heading-subsection">{step.title}</h2>
-                        <span className="text-base text-muted-foreground">— {step.subtitle}</span>
+                        <span className="text-base text-muted-foreground">| {step.subtitle}</span>
                       </div>
                       <p className="text-body mb-4">{step.description}</p>
                       <ul className="grid sm:grid-cols-2 gap-2">

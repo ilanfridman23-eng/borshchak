@@ -18,7 +18,7 @@ const Assets = () => {
               Protecting What You've Built
             </h1>
             <p className="text-body text-xl mb-8">
-              From family businesses to investment portfolios, real estate to retirement accounts—we ensure marital property is accurately valued and divided fairly. Your financial future depends on getting this right.
+              From family businesses to investment portfolios, real estate to retirement accounts, we ensure marital property is accurately valued and divided fairly. Your financial future depends on getting this right.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:+13803240878" className="btn-cta">
@@ -59,13 +59,13 @@ const Assets = () => {
             <h2 className="heading-section mb-6">Our Approach to Asset Division</h2>
             <div className="space-y-6 text-body">
               <p>
-                Ohio is an "equitable distribution" state—meaning marital property is divided fairly, not necessarily 50/50. We build compelling arguments for why an equitable division favors your interests.
+                Ohio is an "equitable distribution" state, meaning marital property is divided fairly, not necessarily 50/50. We build compelling arguments for why an equitable division favors your interests.
               </p>
               <p>
                 For high-net-worth divorces, we partner with forensic accountants and business valuators who understand complex financial structures. We've handled cases involving private companies, professional practices, multiple real estate holdings, and international assets.
               </p>
               <p>
-                We're particularly experienced in protecting business owners. Your company shouldn't be undervalued—or worse, forced into sale—because of inadequate representation. We understand operating agreements, buy-sell provisions, and the difference between enterprise and personal goodwill.
+                We're particularly experienced in protecting business owners. Your company shouldn't be undervalued, or worse, forced into sale, because of inadequate representation. We understand operating agreements, buy-sell provisions, and the difference between enterprise and personal goodwill.
               </p>
             </div>
           </div>
