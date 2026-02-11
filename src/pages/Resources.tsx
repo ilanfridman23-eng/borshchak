@@ -2,6 +2,17 @@ import { Phone, ArrowRight, Calendar, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import blogCustodyStateLines from "@/assets/blog-custody-state-lines.jpg";
+import blogQuestionsBeforeDivorce from "@/assets/blog-questions-before-divorce.jpg";
+import blogJudgesFairSettlements from "@/assets/blog-judges-fair-settlements.jpg";
+import blogMovingOutRisks from "@/assets/blog-moving-out-risks.jpg";
+import blogFilingOutOfState from "@/assets/blog-filing-out-of-state.jpg";
+import blogCollegeExpenses from "@/assets/blog-college-expenses.jpg";
+import blogInheritanceDivorce from "@/assets/blog-inheritance-divorce.jpg";
+import blogAlimonyDisputes from "@/assets/blog-alimony-disputes.jpg";
+import blogFastTrackDissolution from "@/assets/blog-fast-track-dissolution.jpg";
+import blogEvidenceEssentials from "@/assets/blog-evidence-essentials.jpg";
+
 const blogPosts = [
   {
     title: "Enforcing Ohio Child Custody Orders Across State Lines: UCCJEA Explained",
@@ -9,6 +20,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/enforcing-ohio-child-custody-orders-across-state-lines-uccjea-explained/",
     category: "Child Custody",
+    image: blogCustodyStateLines,
   },
   {
     title: "Essential Questions to Ask Before Filing for Divorce in Ohio",
@@ -16,6 +28,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/essential-questions-to-ask-before-filing-for-divorce-in-ohio/",
     category: "Divorce",
+    image: blogQuestionsBeforeDivorce,
   },
   {
     title: "Unveiling Ohio Judges' Approach: Key Factors in Fair Divorce Settlements",
@@ -23,6 +36,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/unveiling-ohio-judges-approach-key-factors-in-fair-divorce-settlements/",
     category: "Divorce",
+    image: blogJudgesFairSettlements,
   },
   {
     title: "What Are the Legal Risks of Moving Out During an Ohio Divorce?",
@@ -30,6 +44,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/what-are-the-legal-risks-of-moving-out-during-an-ohio-divorce/",
     category: "Divorce",
+    image: blogMovingOutRisks,
   },
   {
     title: "Can You File for Divorce in Ohio While Living Out of State? Residency Rules Explained",
@@ -37,6 +52,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/can-you-file-for-divorce-in-ohio-while-living-out-of-state-residency-rules-explained/",
     category: "Divorce",
+    image: blogFilingOutOfState,
   },
   {
     title: "How Divorce Impacts College Expenses for Children in Ohio: Legal Obligations and Agreements",
@@ -44,6 +60,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/how-divorce-impacts-college-expenses-for-children-in-ohio-legal-obligations-and-agreements/",
     category: "Financial Matters",
+    image: blogCollegeExpenses,
   },
   {
     title: "What Happens to Inheritance Money in an Ohio Divorce? Separate Property or Marital Asset?",
@@ -51,6 +68,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/what-happens-to-inheritance-money-in-an-ohio-divorce-separate-property-or-marital-asset/",
     category: "Financial Matters",
+    image: blogInheritanceDivorce,
   },
   {
     title: "Ohio Courts and Alimony Disputes: Modification, Enforcement, and Key Legal Standards",
@@ -58,6 +76,7 @@ const blogPosts = [
     date: "February 10, 2026",
     href: "https://dlbcounsel.com/ohio-courts-and-alimony-disputes-modification-enforcement-and-key-legal-standards/",
     category: "Spousal Support",
+    image: blogAlimonyDisputes,
   },
   {
     title: "Fast-Tracking Divorce in Ohio: Dissolution's 30-90 Day Path Under Key Conditions",
@@ -65,6 +84,7 @@ const blogPosts = [
     date: "February 9, 2026",
     href: "https://dlbcounsel.com/fast-tracking-divorce-in-ohio-dissolutions-30-90-day-path-under-key-conditions/",
     category: "Dissolution",
+    image: blogFastTrackDissolution,
   },
   {
     title: "Key Evidence Essentials for Winning Your Ohio Divorce Case",
@@ -72,6 +92,7 @@ const blogPosts = [
     date: "February 9, 2026",
     href: "https://dlbcounsel.com/key-evidence-essentials-for-winning-your-ohio-divorce-case/",
     category: "Divorce",
+    image: blogEvidenceEssentials,
   },
 ];
 
@@ -105,26 +126,36 @@ const Resources = () => {
                   href={post.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="card-elevated group hover:shadow-lg transition-all duration-300 flex flex-col"
+                  className="card-elevated group hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden rounded-lg"
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <Calendar className="w-3.5 h-3.5" />
-                      {post.date}
-                    </span>
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
                   </div>
-                  <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-3 leading-snug">
-                    {post.title}
-                  </h2>
-                  <p className="text-muted-foreground text-sm flex-1">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-1 text-primary font-medium text-sm mt-4">
-                    Read More
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <span className="flex items-center gap-1 text-sm text-muted-foreground">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {post.date}
+                      </span>
+                    </div>
+                    <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-3 leading-snug">
+                      {post.title}
+                    </h2>
+                    <p className="text-muted-foreground text-sm flex-1">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center gap-1 text-primary font-medium text-sm mt-4">
+                      Read More
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </a>
               ))}
