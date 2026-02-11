@@ -6,7 +6,7 @@ import AwardLogos from "@/components/home/AwardLogos";
 import GoogleReviews from "@/components/home/GoogleReviews";
 import FinalCTA from "@/components/home/FinalCTA";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import happyFamily from "@/assets/happy-family.jpg";
+import testimonialsHero from "@/assets/testimonials-hero.jpg";
 
 const Testimonials = () => {
   const { ref: videoRef, isVisible: videoVisible } = useScrollAnimation();
@@ -19,7 +19,7 @@ const Testimonials = () => {
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={happyFamily}
+            src={testimonialsHero}
             alt="Happy family"
             className="w-full h-full object-cover"
           />
