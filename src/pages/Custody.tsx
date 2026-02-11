@@ -369,6 +369,18 @@ const Custody = () => {
           </div>
         </section>
 
+        {/* Stock Photo: Parent with Child */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=1200&q=80"
+              alt="Parent spending quality time with their child"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* Types of Custody */}
         <section className="section-padding">
           <div
@@ -419,6 +431,18 @@ const Custody = () => {
           </div>
         </section>
 
+        {/* Stock Photo: Family Walking */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80"
+              alt="Family walking together outdoors"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* Custody Modification */}
         <section className="section-padding bg-card">
           <div
@@ -466,6 +490,18 @@ const Custody = () => {
                 An experienced custody attorney can help you build a strong case for modification and present compelling evidence to the court.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Stock Photo: Child Playing */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&q=80"
+              alt="Child playing happily outdoors"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
           </div>
         </section>
 

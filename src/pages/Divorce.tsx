@@ -380,6 +380,18 @@ const Divorce = () => {
           </div>
         </section>
 
+        {/* Stock Photo: Family Discussion */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+              alt="Family having a thoughtful discussion together"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* Legal Grounds for Fault Divorce */}
         <section className="section-padding">
           <div
@@ -400,6 +412,18 @@ const Divorce = () => {
             <p className="text-body text-base mt-6 italic">
               Every case is unique. Having experienced legal guidance is essential, especially since fault can have a significant impact on the outcome.
             </p>
+          </div>
+        </section>
+
+        {/* Stock Photo: Courthouse */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80"
+              alt="Legal documents and courthouse setting"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -514,6 +538,18 @@ const Divorce = () => {
                 An experienced attorney can help save time and money by attempting to settle through mediation or negotiation before litigation.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Stock Photo: New Beginning */}
+        <section className="py-8">
+          <div className="container max-w-4xl">
+            <img
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80"
+              alt="Person looking toward a hopeful new beginning"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              loading="lazy"
+            />
           </div>
         </section>
 
