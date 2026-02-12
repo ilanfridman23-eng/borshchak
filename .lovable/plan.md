@@ -1,118 +1,138 @@
 
-# Recreate Blog Posts as Internal Pages
+
+# Add In-Article Images to Blog Posts
 
 ## Overview
-Convert the 10 blog posts from external links to internal pages hosted on the site, using the exact same text content from each article. Each blog post will be a dedicated page with a clean, readable article layout. The Resources page links will be updated to point to internal routes instead of external URLs.
+Add 4-5 unique, professionally themed images inside each of the 10 blog post articles. Images will be placed between content sections with varied visual treatments to break up text and create visual interest.
 
-## What Will Change
+## Image Generation
+Generate **50 total images** (5 per blog post), each themed to match the surrounding content section. Images will be saved as JPG assets.
 
-### 1. New Shared Blog Post Layout Component
-Create a reusable `BlogPost` component (`src/components/BlogPost.tsx`) that provides a consistent article layout for all 10 posts:
-- Hero section with the post's featured image, title, category badge, and date
-- Clean, readable article body with proper heading hierarchy (h2, h3), paragraphs, lists, tables, and FAQ sections
-- A "Back to Blog" link at the top
-- CTA section at the bottom with a phone call button
-- Legal disclaimer
-- Uses existing typography classes (heading-hero, text-body, section-padding)
+## Varied Image Display Styles
+To keep articles visually dynamic, the BlogPost component will support a new `"image"` section type with multiple layout variants:
 
-### 2. New Blog Data File
-Create `src/data/blogPosts.ts` to centralize all blog post data:
-- Each post gets a unique slug (e.g., `custody-state-lines`, `questions-before-divorce`)
-- Stores metadata (title, excerpt, date, category, image) and the full article content as structured data (arrays of content sections with type: paragraph, heading, list, table, faq)
-- This keeps the content organized and makes it easy to add more posts later
+| Variant | Description |
+|---------|-------------|
+| `full` | Full-width image spanning the article column with rounded corners |
+| `float-right` | Smaller image floated to the right with text wrapping around it |
+| `float-left` | Smaller image floated to the left with text wrapping around it |
+| `side-by-side` | Two images displayed next to each other in a row |
+| `captioned` | Full-width image with a styled caption underneath |
 
-### 3. Ten New Blog Post Content Files
-Create individual content files under `src/data/blog/` -- one per post -- to keep file sizes manageable:
-- `custody-state-lines.ts`
-- `questions-before-divorce.ts`
-- `judges-fair-settlements.ts`
-- `moving-out-risks.ts`
-- `filing-out-of-state.ts`
-- `college-expenses.ts`
-- `inheritance-divorce.ts`
-- `alimony-disputes.ts`
-- `fast-track-dissolution.ts`
-- `evidence-essentials.ts`
+Each blog post will use a mix of these variants so no two articles feel identical.
 
-Each file exports the full article content (exact text from the original posts), structured as sections with headings, paragraphs, bullet lists, and tables.
+## Technical Changes
 
-### 4. New Blog Post Page Component
-Create `src/pages/BlogPostPage.tsx`:
-- Uses `react-router-dom` `useParams` to get the post slug from the URL
-- Looks up the matching post data from the centralized data file
-- Renders the `BlogPost` layout component with the post's content
-- Shows a 404/not found state if the slug doesn't match any post
-
-### 5. Update Routes in App.tsx
-Add a single dynamic route:
-```
-/blog/:slug
-```
-This handles all 10 posts (and any future ones) with one route definition.
-
-### 6. Update Resources Page
-- Change the `href` for each post from external URLs to internal `/blog/{slug}` paths
-- Change the `<a>` tags from external links to React Router `<Link>` components (removes `target="_blank"`)
-- Update the `blogPosts` array to use slugs instead of external hrefs
-
-## Article Layout Design
-Each blog post page will feature:
-- Full-width hero image at the top
-- Title, category badge, and date overlaid or below the image
-- Article body in a readable single-column layout (max-w-3xl, centered)
-- Proper semantic HTML: h2 for section headings, p for paragraphs, ul/li for lists, table for data tables
-- Blockquote styling for FAQ answers
-- Bottom CTA section matching the site's existing style
-
-## Technical Details
-
-### File Structure
-```
-src/
-  components/
-    BlogPost.tsx          (new - reusable article layout)
-  data/
-    blogPosts.ts          (new - centralized post index with slugs)
-    blog/
-      custody-state-lines.ts
-      questions-before-divorce.ts
-      judges-fair-settlements.ts
-      moving-out-risks.ts
-      filing-out-of-state.ts
-      college-expenses.ts
-      inheritance-divorce.ts
-      alimony-disputes.ts
-      fast-track-dissolution.ts
-      evidence-essentials.ts
-  pages/
-    BlogPostPage.tsx      (new - dynamic page component)
-    Resources.tsx          (modified - internal links)
-  App.tsx                  (modified - add /blog/:slug route)
-```
-
-### Content Structure Per Blog Post
-Each content file will export an object like:
+### 1. Update BlogSection Type (`src/data/blog/custody-state-lines.ts`)
+Add a new `"image"` section type to the union:
 ```typescript
-{
-  slug: "custody-state-lines",
-  title: "Enforcing Ohio Child Custody Orders...",
-  excerpt: "...",
-  date: "February 10, 2026",
-  category: "Child Custody",
-  image: blogCustodyStateLines,
-  sections: [
-    { type: "paragraph", content: "..." },
-    { type: "heading", content: "..." },
-    { type: "paragraph", content: "..." },
-    { type: "list", items: ["...", "..."] },
-    { type: "table", headers: [...], rows: [[...], [...]] },
-    { type: "faq", items: [{ question: "...", answer: "..." }] }
-  ]
-}
+| { type: "image"; src: string; alt: string; variant: "full" | "float-right" | "float-left" | "side-by-side" | "captioned"; caption?: string; src2?: string; alt2?: string }
 ```
 
-### Routing
-- `/resources` -- Blog listing page (existing, updated with internal links)
-- `/blog/:slug` -- Individual blog post pages (new)
+### 2. Update BlogPost Component (`src/components/BlogPost.tsx`)
+Add a new `case "image"` in the `renderSection` switch statement that renders different layouts based on the `variant` property:
+- **full**: `rounded-xl overflow-hidden my-8` with full-width image
+- **float-right**: `float-right ml-6 mb-4 w-1/3 rounded-lg` with smaller image
+- **float-left**: `float-left mr-6 mb-4 w-1/3 rounded-lg` with smaller image
+- **side-by-side**: Two images in a `grid grid-cols-2 gap-4 my-8` layout
+- **captioned**: Full-width image with italic caption text below
 
-All 10 articles will use the exact same text content from the original dlbcounsel.com blog posts, just redesigned to match the site's existing visual style.
+Also add a `clear-both` div after floated images via a clearfix on headings.
+
+### 3. Generate 50 New Image Assets
+Five images per blog post, thematically matched:
+
+**Blog 1 - Custody State Lines** (5 images)
+- Parent and child at an airport/road trip
+- Map of Ohio with legal gavel
+- Courtroom interior with family law signage
+- Parent signing legal documents
+- Family walking together outdoors
+
+**Blog 2 - Questions Before Divorce** (5 images)
+- Person sitting at desk reviewing paperwork
+- Notepad with checklist and pen
+- Attorney meeting with client in office
+- Couple sitting apart on a couch
+- Courthouse exterior in Columbus
+
+**Blog 3 - Judges & Fair Settlements** (5 images)
+- Judge's gavel on wooden desk
+- Scales of justice close-up
+- Courtroom with judge's bench
+- Legal documents being reviewed
+- Handshake between professionals
+
+**Blog 4 - Moving Out Risks** (5 images)
+- Moving boxes in empty room
+- House keys on a table
+- Empty living room with sunlight
+- Person loading car trunk
+- Front door of a house
+
+**Blog 5 - Filing Out of State** (5 images)
+- US map with state boundaries
+- Airport terminal
+- Person on phone with laptop
+- Stack of legal forms
+- Highway road sign
+
+**Blog 6 - College Expenses** (5 images)
+- Graduation cap on books
+- College campus building
+- Calculator with financial documents
+- Student studying at desk
+- Tuition statement/bills
+
+**Blog 7 - Inheritance Divorce** (5 images)
+- Antique jewelry box
+- Bank vault/safe deposit box
+- Family photo album
+- Financial advisor meeting
+- Last will and testament document
+
+**Blog 8 - Alimony Disputes** (5 images)
+- Calculator and money on desk
+- Two people in mediation
+- Courtroom scene
+- Financial spreadsheet on screen
+- Professional consultation meeting
+
+**Blog 9 - Fast Track Dissolution** (5 images)
+- Calendar with dates circled
+- Couple shaking hands amicably
+- Clock on wall of office
+- Signed legal agreement
+- Simple clean desk with pen and paper
+
+**Blog 10 - Evidence Essentials** (5 images)
+- Organized file folders
+- Laptop showing financial records
+- Camera or phone (documentation)
+- Evidence binder with tabs
+- Attorney reviewing documents at desk
+
+### 4. Update Each Blog Data File (10 files)
+Insert 5 `{ type: "image", ... }` sections into each blog post's `sections` array, spaced evenly between existing content sections. Each post will use a different mix of variants. For example:
+
+- Blog 1: full, float-right, captioned, side-by-side, full
+- Blog 2: captioned, float-left, full, float-right, side-by-side
+- Blog 3: float-right, full, side-by-side, captioned, float-left
+- (and so on, rotated for variety)
+
+### Files to Create
+- 50 new image assets in `src/assets/` (e.g., `blog-custody-1.jpg` through `blog-evidence-5.jpg`)
+
+### Files to Modify
+- `src/data/blog/custody-state-lines.ts` - Add image type to BlogSection, add 5 image sections
+- `src/data/blog/questions-before-divorce.ts` - Add 5 image sections
+- `src/data/blog/judges-fair-settlements.ts` - Add 5 image sections
+- `src/data/blog/moving-out-risks.ts` - Add 5 image sections
+- `src/data/blog/filing-out-of-state.ts` - Add 5 image sections
+- `src/data/blog/college-expenses.ts` - Add 5 image sections
+- `src/data/blog/inheritance-divorce.ts` - Add 5 image sections
+- `src/data/blog/alimony-disputes.ts` - Add 5 image sections
+- `src/data/blog/fast-track-dissolution.ts` - Add 5 image sections
+- `src/data/blog/evidence-essentials.ts` - Add 5 image sections
+- `src/components/BlogPost.tsx` - Add image rendering with 5 variant styles
+
