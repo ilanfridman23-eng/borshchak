@@ -28,7 +28,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-3 text-base text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>250 Civic Center Dr, Suite 400<br />Columbus, OH 43215</span>
+                <span>1650 Lake Shore Drive, Suite 380<br />Columbus, OH 43204</span>
               </div>
             </div>
           </div>
