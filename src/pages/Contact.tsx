@@ -148,8 +148,8 @@ const Contact = () => {
                       <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <div>
                         <p className="font-medium text-lg text-foreground">Call Us</p>
-                        <a href="tel:+16145551234" className="text-muted-foreground hover:text-primary transition-colors">
-                          (614) 555-1234
+                        <a href="tel:+16143346851" className="text-muted-foreground hover:text-primary transition-colors">
+                          614-334-6851
                         </a>
                       </div>
                     </div>
@@ -158,8 +158,8 @@ const Contact = () => {
                       <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <div>
                         <p className="font-medium text-lg text-foreground">Email Us</p>
-                        <a href="mailto:info@morrisonfamilylaw.com" className="text-muted-foreground hover:text-primary transition-colors">
-                          info@morrisonfamilylaw.com
+                        <a href="mailto:info@borshchaklawgroup.com" className="text-muted-foreground hover:text-primary transition-colors">
+                          info@borshchaklawgroup.com
                         </a>
                       </div>
                     </div>
@@ -169,8 +169,8 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-lg text-foreground">Visit Us</p>
                         <p className="text-muted-foreground">
-                          250 Civic Center Dr, Suite 400<br />
-                          Columbus, OH 43215
+                          1650 Lake Shore Drive, Suite 380<br />
+                          Columbus, OH 43204
                         </p>
                       </div>
                     </div>
