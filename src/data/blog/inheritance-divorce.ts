@@ -68,7 +68,8 @@ const post: BlogPostData = {
     { type: "paragraph", content: "By following these steps, you can reduce the risk of your inheritance being divided in a divorce and protect your family legacy for future generations." },
     { type: "heading", content: "Conclusion: Safeguarding Your Inheritance in an Ohio Divorce" },
     { type: "paragraph", content: "Inheritances can be a lifeline, a legacy, or a cherished family asset. In Ohio divorces, the distinction between separate and marital property is critical—and the outcome often depends on how you handle your inheritance before and during marriage. By keeping inherited assets separate, maintaining clear documentation, and seeking legal advice when needed, you can protect what's rightfully yours." },
-    { type: "paragraph", content: "Whether you're a business owner, developer, or simply want to safeguard your future, understanding these rules is essential. Don't leave your family legacy to chance. Take proactive steps, stay informed, and if you're facing a divorce, work with experienced professionals who can guide you through the process. With the right approach, you can ensure that your inheritance remains protected and that your financial future is secure." },
+    { type: "paragraph", content: "Whether you're protecting a family inheritance, a business interest, or personal assets, understanding how Ohio law treats separate property is essential. Don't leave your family legacy to chance. Take proactive steps, stay informed, and work with experienced professionals who can guide you through the process." },
+    { type: "paragraph", content: "This article is for general informational purposes only and does not constitute legal advice. The information on this page applies to Ohio law and may not apply to other jurisdictions. Every case is unique — contact a qualified family law attorney for advice specific to your situation." },
   ],
 };
 

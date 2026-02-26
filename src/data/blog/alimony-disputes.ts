@@ -75,6 +75,7 @@ const post: BlogPostData = {
     { type: "paragraph", content: "Alimony disputes in Ohio, especially in Columbus and Franklin County, require careful planning, comprehensive documentation, and a clear understanding of the law. Whether you have complex business assets or are simply navigating the end of a marriage, being proactive and informed can make a significant difference in the outcome of your case." },
     { type: "paragraph", content: "By understanding the legal standards for modification and enforcement, preparing detailed financial records, and seeking the guidance of experienced professionals, you can protect your interests and ensure a fair result. Remember, every case is unique, and the best approach is one tailored to your specific circumstances and goals." },
     { type: "paragraph", content: "If you are facing an alimony dispute or have questions about your rights and responsibilities, take the time to consult with knowledgeable legal and financial advisors. With the right support and preparation, you can navigate the complexities of Ohio's alimony laws and move forward with confidence." },
+    { type: "paragraph", content: "This article is for general informational purposes only and does not constitute legal advice. The information on this page applies to Ohio law and may not apply to other jurisdictions. Every case is unique — contact a qualified family law attorney for advice specific to your situation." },
   ],
 };
 

@@ -92,7 +92,8 @@ const post: BlogPostData = {
     { type: "heading", content: "Conclusion: Protecting Your Child's Best Interests Across State Lines" },
     { type: "image", src: blogCustody5, alt: "Happy family walking together outdoors", variant: "full" },
     { type: "paragraph", content: "Navigating child custody enforcement across state lines can be complex, but the UCCJEA provides a clear and reliable framework for parents in Columbus and throughout Ohio. By understanding the law, registering your custody order when necessary, and working with experienced legal counsel, you can ensure your parental rights are protected and your child's best interests remain the top priority—even when life's journey takes you beyond Ohio's borders." },
-    { type: "paragraph", content: "Whether you're a small business owner, a developer, or a parent facing a major life transition, preparation is key. Stay informed, keep thorough records, and seek legal advice early to avoid unnecessary stress and complications. With the right knowledge and support, you can confidently navigate the challenges of interstate custody and focus on what matters most: your child's happiness and security." },
+    { type: "paragraph", content: "Whether you are a parent navigating a relocation or dealing with custody enforcement across state lines, preparation is key. Stay informed, keep thorough records, and seek legal advice early to avoid unnecessary complications. With the right knowledge and support, you can navigate the challenges of interstate custody and focus on what matters most: your child's wellbeing and security." },
+    { type: "paragraph", content: "This article is for general informational purposes only and does not constitute legal advice. The information on this page applies to Ohio law and may not apply to other jurisdictions. Every case is unique — contact a qualified family law attorney for advice specific to your situation." },
   ],
 };
 
